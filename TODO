@@ -6,4 +6,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
 
 
 * v0.0.0-1 (14 Jul. 2023 - ???)
-- (1) Add basic project files
+- (2) Add first rspec-based unit test
+- Add basic project files

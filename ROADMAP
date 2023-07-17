@@ -9,6 +9,8 @@
 - [ ] if #funcname found, run this function from 
 **** Handle Unit tests and API documentation
 - [ ] Maybe based on RSpec
+  - [ ] Main script can be found, is executable and return an error status code
+    when called on an anexisting dir
 - [ ] From test/ directory. Add a Makefile rule for that
   
 **** TODO Open a web server based on a DSL-based ruby configuration file

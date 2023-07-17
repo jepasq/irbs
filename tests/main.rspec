@@ -1,0 +1,15 @@
+#                                          -*-ruby-*-
+
+# The main script location
+script='../src/irbs'
+
+# Just a fake, dummy class
+class MainScript 
+end  
+
+describe MainScript do
+  it "exists" do
+    expect(File.exists?(script)).to be true
+  end
+  
+end
