@@ -3,8 +3,10 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
 * See ROADMAP
 
 === ChangeLog ===
-
+    (8 items by revision)
+    Add a git tag fro each revision
 
 * v0.0.0-1 (14 Jul. 2023 - ???)
-- (2) Add first rspec-based unit test
+- (3) Add an executable main script rspec test
+- Add first rspec-based unit test
 - Add basic project files
