@@ -1,0 +1,26 @@
+							-*-org-*-
+
+
+* v1.0.0
+** v0.1.0
+*** v0.0.1
+**** Work on the representation parser
+- [ ] If .varname found, print this field value
+- [ ] if #funcname found, run this function from 
+**** Handle Unit tests and API documentation
+- [ ] Maybe based on RSpec
+- [ ] From test/ directory. Add a Makefile rule for that
+  
+**** TODO Open a web server based on a DSL-based ruby configuration file
+Based on a static generator tool but to a fully REST server
+
+- [ ] Main script is in src/
+- [ ] Add a Makefile with an install rule
+- [ ] Should accept project dir as URL or use pwd if not used
+- [ ] The main entry file could be a ruby-based DSL to configure server
+  host, port etc...
+  see https://www.paweldabrowski.com/articles/building-dsl-with-ruby
+- [ ] Open our own webserver
+  https://www.rubyguides.com/2016/08/build-your-own-web-server/
+- [ ] First tests go in examples/{name}/ directory
+  Unit tests may be based on this examples and the main script return value
