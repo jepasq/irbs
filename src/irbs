@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+VERSION="0.0.0"
+REVISION="1"
+
+if ARGV.length > 1
+  raise "Too much command line arguments."
+end
+

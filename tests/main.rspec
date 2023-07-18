@@ -20,4 +20,12 @@ describe MainScript do
   it "is executable" do
     expect(File.executable?(script)).to be true
   end
+
+  it "More than 1 arg produces error status code" do
+    # The '2>&1' trick is here to redirect stderr to stdout and finally
+    # have a quit output in tests
+    output = `#{script} arg1 arg2 2>&1`
+    expect($?.success?).to be false
+  end
+  
 end
