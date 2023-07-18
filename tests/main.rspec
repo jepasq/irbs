@@ -21,11 +21,20 @@ describe MainScript do
     expect(File.executable?(script)).to be true
   end
 
-  it "More than 1 arg produces error status code" do
+  it "more than 1 arg produces error status code" do
     # The '2>&1' trick is here to redirect stderr to stdout and finally
     # have a quit output in tests
     output = `#{script} arg1 arg2 2>&1`
     expect($?.success?).to be false
   end
+
+  it "directory argument should exist" do
+    output = `#{script} examples/test01 2>&1`
+    expect($?.success?).to be true
+
+    output = `#{script} examples/thisDirectoryWontExistEvenInSeveralYears 2>&1`
+    expect($?.success?).to be false
+  end
+
   
 end

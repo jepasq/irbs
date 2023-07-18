@@ -8,7 +8,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     Update version and revision in src/irbs header constants.
 
 * v0.0.0-1 (14 Jul. 2023 - ???)
-- (7) Check error if more than 1 arg
+- (8) Add failing unit test related to frist arg directory
+- Check error if more than 1 arg
 - Add a basic install rule
 - Specs checks pwd before running
 - Fix actual unit tests
