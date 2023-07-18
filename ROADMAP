@@ -14,9 +14,12 @@
 - [ ] From test/ directory. Add a Makefile rule for that
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
+:LOGBOOK:
+CLOCK: [2023-07-18 mar. 11:55]
+:END:
 Based on a static generator tool but to a fully REST server
 
-- [ ] Main script is in src/
+- [X] Main script is in src/
 - [ ] Add a Makefile with an install rule
 - [ ] Should accept project dir as URL or use pwd if not used
 - [ ] The main entry file could be a ruby-based DSL to configure server
