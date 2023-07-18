@@ -15,7 +15,7 @@
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
-CLOCK: [2023-07-18 mar. 11:55]
+CLOCK: [2023-07-18 mar. 11:55]--[2023-07-18 mar. 12:14] =>  0:19
 :END:
 Based on a static generator tool but to a fully REST server
 

@@ -7,7 +7,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     Add a git tag fro each revision
 
 * v0.0.0-1 (14 Jul. 2023 - ???)
-- (4) Fix actual unit tests
+- (5) Specs checks pwd before running
+- Fix actual unit tests
 - Add an executable main script rspec test
 - Add first rspec-based unit test
 - Add basic project files

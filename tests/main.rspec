@@ -3,6 +3,11 @@
 # The main script location
 script='src/irbs'
 
+# Check if this script is correctly called from root sir
+unless Dir.pwd.end_with? "irbs"
+  raise "Specs must be called from root directory. Please use `make check'"
+end
+
 # Just a fake, dummy class
 class MainScript 
 end  
