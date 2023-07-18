@@ -1,0 +1,9 @@
+* v0.0.0-1 (14 Jul. 2023 - 18 Jul. 2023) SLOC 0
+- Add failing unit test related to frist arg directory
+- Check error if more than 1 arg
+- Add a basic install rule
+- Specs checks pwd before running
+- Fix actual unit tests
+- Add an executable main script rspec test
+- Add first rspec-based unit test
+- Add basic project files
