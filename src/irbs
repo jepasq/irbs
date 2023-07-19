@@ -7,3 +7,14 @@ if ARGV.length > 1
   raise "Too much command line arguments."
 end
 
+dir = ARGV[0]
+if dir.nil?
+  dir = Dir.pwd
+else
+  dir = File.expand_path(dir)
+end
+
+p dir
+unless File.directory? dir
+  raise "Directory passed as first argument must exist"
+end  

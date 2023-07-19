@@ -1,6 +1,5 @@
 							-*-org-*-
 
-
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
@@ -15,6 +14,7 @@
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-07-19 mer. 05:18]--[2023-07-19 mer. 05:37] =>  0:19
 CLOCK: [2023-07-18 mar. 13:17]--[2023-07-18 mar. 13:24] =>  0:07
 CLOCK: [2023-07-18 mar. 12:43]--[2023-07-18 mar. 12:58] =>  0:15
 CLOCK: [2023-07-18 mar. 12:30]--[2023-07-18 mar. 12:37] =>  0:07
@@ -25,8 +25,11 @@ Based on a static generator tool but to a fully REST server
 - [X] Main script is in src/
 - [X] Add a Makefile with an install rule
 - [X] If more that 1 arg, error  
-- [ ] Should accept project dir as arg or use pwd if not used
-- [ ] Is first arg is not a directory or doesn't exist, raise  
+- [X] Should accept project dir as arg or use pwd if not used
+- [X] If first arg is not a directory or doesn't exist, raise
+- [ ] Must have an option to print page to stdout for test purpose
+- [ ] Default opened page/class may be Home or Root but must be configurable
+    
 - [ ] The main entry file could be a ruby-based DSL to configure server
   host, port etc...
   see https://www.paweldabrowski.com/articles/building-dsl-with-ruby
