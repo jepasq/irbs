@@ -36,5 +36,22 @@ describe MainScript do
     expect($?.success?).to be false
   end
 
+  it "has a usage option" do
+    output = `#{script} --help`
+    expect(output.include? "usage").to be true
+
+    output = `#{script} -h`
+    expect(output.include? "usage").to be true
+    output = `#{script} -?`
+    expect(output.include? "usage").to be true
+
+  end
+
+  # This one is not yet failing because it test options as a directory
+  it "raises an exception if option doesn't exist" do
+    `#{script} --thisOptionDoesntExist`
+    expect($?.success?).to be false
+  end
+
   
 end

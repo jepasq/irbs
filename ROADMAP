@@ -27,9 +27,12 @@ Based on a static generator tool but to a fully REST server
 - [X] If more that 1 arg, error  
 - [X] Should accept project dir as arg or use pwd if not used
 - [X] If first arg is not a directory or doesn't exist, raise
+- [ ] Must find a way to handle '-' starting option and raise an
+  exception if not handled
+- [ ] -?, -h or --help may print a usage message
 - [ ] Must have an option to print page to stdout for test purpose
 - [ ] Default opened page/class may be Home or Root but must be configurable
-    
+- [ ] Test that usage text contains appname and version    
 - [ ] The main entry file could be a ruby-based DSL to configure server
   host, port etc...
   see https://www.paweldabrowski.com/articles/building-dsl-with-ruby
