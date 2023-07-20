@@ -14,6 +14,7 @@
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-07-20 jeu. 12:03]--[2023-07-20 jeu. 12:21] =>  0:18
 CLOCK: [2023-07-20 jeu. 11:10]--[2023-07-20 jeu. 11:40] =>  0:30
 CLOCK: [2023-07-20 jeu. 10:45]--[2023-07-20 jeu. 11:03] =>  0:18
 CLOCK: [2023-07-19 mer. 05:18]--[2023-07-19 mer. 05:37] =>  0:19
@@ -31,7 +32,7 @@ Based on a static generator tool but to a fully REST server
 - [X] If first arg is not a directory or doesn't exist, raise
 - [-] Start argument handling function
   - [X] Add an argument.rb file and class
-  - [ ] An argument is a command with help text and an action block and
+  - [X] An argument is a command with help text and an action block and
     possibly aliases
   - [ ] Must be able to print all options with help text (for usage)
   - [ ] Must consume encountered options from ARGV list to let raise an

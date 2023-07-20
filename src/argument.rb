@@ -20,6 +20,29 @@ class Argument
   
 end
 
+# Represent a single argument option with a yield block, a help text
+# and possibly multiples aliases
 class ArgumentOption
+  def initialize(text, help)
+    @help = help
+    @action = yield
+    @aliases = [text]
+  end  
 
+  def fire
+    @action
+  end
+
+  def add_alias(text)
+    @aliases << text
+  end
+
+  def fire_if(arg)
+    if @aliases.include? arg
+      @action
+      return true
+    else
+      return false
+    end
+  end
 end
