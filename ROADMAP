@@ -14,6 +14,8 @@
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-07-20 jeu. 11:10]--[2023-07-20 jeu. 11:40] =>  0:30
+CLOCK: [2023-07-20 jeu. 10:45]--[2023-07-20 jeu. 11:03] =>  0:18
 CLOCK: [2023-07-19 mer. 05:18]--[2023-07-19 mer. 05:37] =>  0:19
 CLOCK: [2023-07-18 mar. 13:17]--[2023-07-18 mar. 13:24] =>  0:07
 CLOCK: [2023-07-18 mar. 12:43]--[2023-07-18 mar. 12:58] =>  0:15
@@ -27,6 +29,13 @@ Based on a static generator tool but to a fully REST server
 - [X] If more that 1 arg, error  
 - [X] Should accept project dir as arg or use pwd if not used
 - [X] If first arg is not a directory or doesn't exist, raise
+- [-] Start argument handling function
+  - [X] Add an argument.rb file and class
+  - [ ] An argument is a command with help text and an action block and
+    possibly aliases
+  - [ ] Must be able to print all options with help text (for usage)
+  - [ ] Must consume encountered options from ARGV list to let raise an
+    error for unrecognized option
 - [ ] Must find a way to handle '-' starting option and raise an
   exception if not handled
 - [ ] -?, -h or --help may print a usage message
@@ -40,3 +49,6 @@ Based on a static generator tool but to a fully REST server
   https://www.rubyguides.com/2016/08/build-your-own-web-server/
 - [ ] First tests go in examples/{name}/ directory
   Unit tests may be based on this examples and the main script return value
+**** Correct project handling
+- [ ] github should run CI
+- [ ]   

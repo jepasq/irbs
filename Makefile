@@ -3,7 +3,7 @@ BIN=/usr/local/bin
 PWD=`pwd`
 
 check:
-	rspec tests/*
+	rspec -I src/ tests/*.rspec
 
 install:
 	mkdir -p $(BIN)

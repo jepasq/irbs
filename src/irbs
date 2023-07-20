@@ -18,3 +18,5 @@ p dir
 unless File.directory? dir
   raise "Directory passed as first argument must exist"
 end  
+
+# Argument handling

@@ -1,0 +1,21 @@
+#                                          -*-ruby-*-
+
+require 'argument'
+
+describe Argument do
+  it "can be instantiated" do
+    a = Argument.new  # In fact, already fire an ArgumenttError here
+    b = ArgumentOption.new
+    
+    expect(a.nil?).to be false    
+  #    expect(File.exists?(script)).to be true
+  end
+
+  it "has a list we can add Option to" do
+    a = Argument.new
+    # Can't add anything but an ArgumentOption
+    expect { a.add(2) }.to raise_error(ArgumentError)
+
+    a.add ArgumentOption.new
+  end
+end	
