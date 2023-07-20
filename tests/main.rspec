@@ -45,6 +45,8 @@ describe MainScript do
     output = `#{script} -?`
     expect(output.include? "usage").to be true
 
+    output = `#{script} -h`
+    expect($?.success?).to be true
   end
 
   # This one is not yet failing because it test options as a directory

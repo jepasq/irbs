@@ -2,7 +2,6 @@
 
 Inspection/Representation Based web Server.
 
-
 ## Dependencies
 
 You must install rspec before running unit tests :
@@ -23,3 +22,11 @@ A *Makefile* provides a rule to link in-source binary to `/usr/local/bin`. To
 use it, try :
 
 	make install
+
+## Unit tests
+
+Unit tests are provided by rspec-based files in `tests/`. You can run them
+using the following command :
+
+	make check
+

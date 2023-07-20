@@ -15,7 +15,12 @@ class Argument
 
   def consume(argv)
     raise ArgumentError unless option.is_a?(Array)
-    
+
+    @opts.each do |o|
+      # Remove the test one so we can know wich one wasn't handled
+      @opts.delete o
+      break if o.fire_if argv
+    end
   end
   
 end
