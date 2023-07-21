@@ -52,5 +52,8 @@ Based on a static generator tool but to a fully REST server
 - [ ] First tests go in examples/{name}/ directory
   Unit tests may be based on this examples and the main script return value
 **** Correct project handling
+:LOGBOOK:
+CLOCK: [2023-07-21 ven. 15:22]--[2023-07-21 ven. 15:30] =>  0:08
+:END:
 - [ ] github should run CI
-- [ ]   
+- [ ] Make this project's github repo public
