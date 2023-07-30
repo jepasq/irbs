@@ -1,7 +1,7 @@
 # Handles command line arguments for the engine
 
 class Argument
-  @opts= nil # The list of options
+  attr_reader :opts # The list of options
 
   def initialize
     @opts= Array.new
@@ -49,5 +49,12 @@ class ArgumentOption
     else
       return false
     end
+  end
+
+  # Handle text representation here
+  def to_s
+    ret  = sprintf "%10s", aliases.join(', ')
+    ret += @help
+    ret
   end
 end

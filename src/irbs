@@ -11,10 +11,18 @@ end
 require_relative 'argument'
 
 arg=Argument.new
-help = ArgumentOption.new('--help', 'Show usage text and exit'){
-  puts 'irbs usage text!'
+
+help = ArgumentOption.new('--help', 'Show usage text and exit') do
+  puts "irbs v#{VERSION}-#{REVISION} usage text :\n"
+  puts "An Inspection/Representation Based web Server."
+  
+  puts "\nOptions :"
+  puts "  --help, -h, -?   Print this usage text and exit with 0 exit status."
+  arg.opts.each do a
+    puts "  #{a}"
+  end
   exit(0)
-}
+end
 arg.add(help)
 arg.consume(ARGV)
 

@@ -23,6 +23,7 @@
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-07-31 lun. 00:42]--[2023-07-31 lun. 00:57] =>  0:15
 CLOCK: [2023-07-20 jeu. 13:27]--[2023-07-20 jeu. 14:00] =>  0:33
 CLOCK: [2023-07-20 jeu. 12:03]--[2023-07-20 jeu. 12:21] =>  0:18
 CLOCK: [2023-07-20 jeu. 11:10]--[2023-07-20 jeu. 11:40] =>  0:30
@@ -44,7 +45,7 @@ Based on a static generator tool but to a fully REST server
   - [X] Add an argument.rb file and class
   - [X] An argument is a command with help text and an action block and
     possibly aliases
-  - [ ] Must be able to print all options with help text (for usage)
+  - [X] Must be able to print all options with help text (for usage)
   - [ ] Must consume encountered options from ARGV list to let raise an
     error for unrecognized option
 - [ ] Must find a way to handle '-' starting option and raise an
