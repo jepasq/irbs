@@ -4,6 +4,15 @@
 ** v0.1.0
 *** v0.0.1
 **** Work on the representation parser
+- [ ] Could be find if it works as (return should be implicite)
+#+BEGIN_EXAMPLE
+    def to_s
+      """
+      Here is the returned content.
+      And here, a #{variable} content!
+      """
+    end
+#+END_EXAMPLE
 - [ ] If .varname found, print this field value
 - [ ] if #funcname found, run this function from 
 **** Handle Unit tests and API documentation
@@ -55,5 +64,5 @@ Based on a static generator tool but to a fully REST server
 :LOGBOOK:
 CLOCK: [2023-07-21 ven. 15:22]--[2023-07-21 ven. 15:30] =>  0:08
 :END:
-- [ ] github should run CI
+- [X] github should run CI
 - [ ] Make this project's github repo public
