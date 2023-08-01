@@ -32,6 +32,7 @@ describe MainScript do
     output = `#{script} examples/test01 2>&1`
     expect($?.success?).to be true
 
+    # Can't test Eception raising here because script is executed via shell
     output = `#{script} examples/thisDirectoryWontExistEvenInSeveralYears 2>&1`
     expect($?.success?).to be false
   end

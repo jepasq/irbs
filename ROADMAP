@@ -7,13 +7,15 @@
 - [ ] Could be find if it works as (return should be implicite)
 #+BEGIN_EXAMPLE
     def to_s
-      """
+      "
       Here is the returned content.
       And here, a #{variable} content!
-      """
+      "
     end
 #+END_EXAMPLE
-- [ ] If .varname found, print this field value
+And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-strings-in-ruby-8dcfa87bfb26
+- [ ] If #{varname} found, print this field value. Normal way for ruby.
+  Does it work for functions ?
 - [ ] if #funcname found, run this function from 
 **** Handle Unit tests and API documentation
 - [ ] Maybe based on RSpec
@@ -23,6 +25,7 @@
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-08-01 mar. 01:48]--[2023-08-01 mar. 02:05] =>  0:17
 CLOCK: [2023-07-31 lun. 00:42]--[2023-07-31 lun. 00:57] =>  0:15
 CLOCK: [2023-07-20 jeu. 13:27]--[2023-07-20 jeu. 14:00] =>  0:33
 CLOCK: [2023-07-20 jeu. 12:03]--[2023-07-20 jeu. 12:21] =>  0:18
@@ -41,13 +44,14 @@ Based on a static generator tool but to a fully REST server
 - [X] If more that 1 arg, error  
 - [X] Should accept project dir as arg or use pwd if not used
 - [X] If first arg is not a directory or doesn't exist, raise
-- [-] Start argument handling function
+- [X] Start argument handling function
   - [X] Add an argument.rb file and class
   - [X] An argument is a command with help text and an action block and
     possibly aliases
   - [X] Must be able to print all options with help text (for usage)
-  - [ ] Must consume encountered options from ARGV list to let raise an
+  - [X] Must consume encountered options from ARGV list to let raise an
     error for unrecognized option
+- [ ] Fix actual unit tests error    
 - [ ] Must find a way to handle '-' starting option and raise an
   exception if not handled
 - [ ] -?, -h or --help may print a usage message
@@ -61,7 +65,7 @@ Based on a static generator tool but to a fully REST server
   https://www.rubyguides.com/2016/08/build-your-own-web-server/
 - [ ] First tests go in examples/{name}/ directory
   Unit tests may be based on this examples and the main script return value
-**** Correct project handling
+**** TODO Correct project handling
 :LOGBOOK:
 CLOCK: [2023-07-21 ven. 15:22]--[2023-07-21 ven. 15:30] =>  0:08
 :END:

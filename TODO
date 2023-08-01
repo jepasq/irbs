@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-2 (18 Jul. 2023 - ???) SLOC ?
-- (7) Print arguments options in usage text
+- (8) Argument correctly consume encountered arguments
+- Print arguments options in usage text
 - Setup github actions to run rspec-based CI
 - Add basic usage ArgumentOption handling code
 - Add ArgumentOption#fire ans #fire_if functions

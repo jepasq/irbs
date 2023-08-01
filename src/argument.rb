@@ -1,5 +1,8 @@
 # Handles command line arguments for the engine
 
+# The command line argument handling class
+#
+# Based on a ArgumentOption array, you can add instances of this class only.
 class Argument
   attr_reader :opts # The list of options
 
@@ -10,17 +13,17 @@ class Argument
   def add(option)
     raise ArgumentError unless option.is_a?(ArgumentOption)
 
-    @opts << "aze"
+    @opts << option
   end
 
   def consume(argv)
-    raise ArgumentError unless option.is_a?(Array)
-
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
       @opts.delete o
       break if o.fire_if argv
     end
+
+    raise ArgumentError unless @opts.empty?
   end
   
 end
