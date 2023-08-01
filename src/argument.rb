@@ -17,13 +17,18 @@ class Argument
   end
 
   def consume(argv)
+    # Remove all to-be-handled arguments from a copied array
+    p argv
+    ttt= @opts
+    ttt.each do |o|
+      ttt.remove o if o.aliases.include? argv
+    end
+    raise ArgumentError unless ttt.empty?
+    
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
-      @opts.delete o
       break if o.fire_if argv
     end
-
-    raise ArgumentError unless @opts.empty?
   end
   
 end
@@ -31,6 +36,8 @@ end
 # Represent a single argument option with a yield block, a help text
 # and possibly multiples aliases
 class ArgumentOption
+  attr_reader :aliases
+  
   def initialize(text, help)
     @help = help
     @action = yield

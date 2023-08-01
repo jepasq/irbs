@@ -23,6 +23,8 @@ help = ArgumentOption.new('--help', 'Show usage text and exit') do
   end
   exit(0)
 end
+help.add_alias "-h"
+help.add_alias "-?"
 arg.add(help)
 arg.consume(ARGV)
 
