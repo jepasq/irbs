@@ -1,3 +1,13 @@
+* v0.0.0-2 (18 Jul. 2023 - 01 Aug. 2023) SLOC 63
+- Argument correctly consume encountered arguments
+- Print arguments options in usage text
+- Setup github actions to run rspec-based CI
+- Add basic usage ArgumentOption handling code
+- Add ArgumentOption#fire ans #fire_if functions
+- Add basic Argument and rspec class
+- Add a couple of options-related unit tests
+- Check if provided directory exist
+
 * v0.0.0-1 (14 Jul. 2023 - 18 Jul. 2023) SLOC 0
 - Add failing unit test related to frist arg directory
 - Check error if more than 1 arg
