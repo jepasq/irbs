@@ -25,6 +25,7 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
   
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-08-02 mer. 02:58]--[2023-08-02 mer. 03:22] =>  0:24
 CLOCK: [2023-08-02 mer. 02:42]--[2023-08-02 mer. 02:52] =>  0:10
 CLOCK: [2023-08-01 mar. 02:44]--[2023-08-01 mar. 03:14] =>  0:30
 CLOCK: [2023-08-01 mar. 01:48]--[2023-08-01 mar. 02:05] =>  0:17
@@ -53,7 +54,7 @@ Based on a static generator tool but to a fully REST server
   - [X] Must be able to print all options with help text (for usage)
   - [X] Must consume encountered options from ARGV list to let raise an
     error for unrecognized option
-- [ ] When consuming options, should only keep the ones starting with '-'
+- [X] When consuming options, should only keep the ones starting with '-'
 - [ ] Fix actual unit tests error    
 - [ ] Must find a way to handle '-' starting option and raise an
   exception if not handled

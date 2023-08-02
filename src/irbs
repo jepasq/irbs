@@ -3,10 +3,6 @@
 VERSION="0.0.0"
 REVISION="1"
 
-if ARGV.length > 1
-  raise "Too much command line arguments."
-end
-
 # Argument handling
 require_relative 'argument'
 
@@ -19,7 +15,7 @@ help = ArgumentOption.new('--help', 'Show usage text and exit') do
   puts "\nOptions :"
   puts "  --help, -h, -?   Print this usage text and exit with 0 exit status."
   arg.opts.each do a
-    puts "  #{a}"
+    puts "  #{a.full_text}"
   end
   exit(0)
 end

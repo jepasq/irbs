@@ -19,10 +19,12 @@ class Argument
   def consume(argv)
     # Remove all to-be-handled arguments from a copied array
     ttt= @opts
+    ## but before, remove all non-arguments ones
+    argv2 = argv.select{|e| e.start_with? '-'}
     ttt.each do |o|
-      ttt.remove o if o.aliases.include? argv
+      ttt.remove o if o.aliases.include? argv2
     end
-    msg = argv.join(',')
+    msg = ttt.join(',')
     raise "#{msg} argument(s) unknown" unless ttt.empty?
     
     @opts.each do |o|
@@ -61,10 +63,14 @@ class ArgumentOption
     end
   end
 
-  # Handle text representation here
-  def to_s
+  def full_text
     ret  = sprintf "%10s", aliases.join(', ')
     ret += @help
     ret
+  end
+
+  # Handle text representation here
+  def to_s
+    aliases[0]
   end
 end

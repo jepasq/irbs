@@ -9,5 +9,6 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-3 (01 Aug. 2023 - ???) SLOC ??
-- (2) Affect block parameter as actions
+- (3) Only consume options starting with a dash
+- Affect block parameter as actions
 - Remove all to-be-handled arguments from a copied array
