@@ -18,12 +18,12 @@ class Argument
 
   def consume(argv)
     # Remove all to-be-handled arguments from a copied array
-    p argv
     ttt= @opts
     ttt.each do |o|
       ttt.remove o if o.aliases.include? argv
     end
-    raise ArgumentError unless ttt.empty?
+    msg = argv.join(',')
+    raise "#{msg} argument(s) unknown" unless ttt.empty?
     
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
@@ -38,14 +38,14 @@ end
 class ArgumentOption
   attr_reader :aliases
   
-  def initialize(text, help)
+  def initialize(text, help, &block)
     @help = help
-    @action = yield
+    @action = block
     @aliases = [text]
   end  
 
   def fire
-    @action
+    @action.call
   end
 
   def add_alias(text)
