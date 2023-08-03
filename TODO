@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-3 (01 Aug. 2023 - ???) SLOC ??
-- (6) Add basic Server class with first instance vars
+- (7) Better arguments error handling using delete_if
+- Add basic Server class with first instance vars
 - Add empty non-interactive and endpoint options
 - Finally wrote the base of first example
 - Only consume options starting with a dash

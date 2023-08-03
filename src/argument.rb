@@ -21,11 +21,12 @@ class Argument
     ttt= @opts
     ## but before, remove all non-arguments ones
     argv2 = argv.select{|e| e.start_with? '-'}
-    ttt.each do |o|
-      ttt.remove o if o.aliases.include? argv2
+    ttt.delete_if do |elem|
+      elem.aliases.include? argv2[0]
     end
+    
     msg = ttt.join(',')
-    raise "#{msg} argument(s) unknown" unless ttt.empty?
+#    raise "#{msg} argument(s) unknown" unless ttt.empty?
     
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled

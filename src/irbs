@@ -63,6 +63,6 @@ else
 end
 
 unless File.directory? dir
-  raise "Directory passed as first argument must exist"
+  raise "Directory passed as first argument (#{dir}) doesn't exist"
 end  
 
