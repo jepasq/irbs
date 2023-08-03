@@ -5,6 +5,9 @@ REVISION="1"
 
 # Argument handling
 require_relative 'argument'
+require_relative 'server'
+
+srv = Server.new
 
 arg=Argument.new
 
@@ -25,6 +28,7 @@ arg.add(help)
 
 ni = ArgumentOption.new('--non-interactive',
                           'Print endpoint to console and exit.') do
+  srv.interactive = false
   exit(0)
 end
 ni.add_alias "-n"
@@ -33,10 +37,20 @@ arg.add ni
 
 ep = ArgumentOption.new('--endpoint',
                           'The endpoint to print in non-interactive mode.') do
+  srv.endpoint = ARGV[ARGV.index('--endpoint') + 1]
   exit(0)
 end
 ep.add_alias "-e"
 arg.add ep
+
+po = ArgumentOption.new('--port',
+                          'The port to listen client from.') do
+  srv.endpoint = ARGV[ARGV.index('--port') + 1]
+  exit(0)
+end
+po.add_alias "-p"
+arg.add po
+
 
 arg.consume(ARGV)
 
