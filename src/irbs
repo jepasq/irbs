@@ -22,6 +22,22 @@ end
 help.add_alias "-h"
 help.add_alias "-?"
 arg.add(help)
+
+ni = ArgumentOption.new('--non-interactive',
+                          'Print endpoint to console and exit.') do
+  exit(0)
+end
+ni.add_alias "-n"
+arg.add ni
+
+
+ep = ArgumentOption.new('--endpoint',
+                          'The endpoint to print in non-interactive mode.') do
+  exit(0)
+end
+ep.add_alias "-e"
+arg.add ep
+
 arg.consume(ARGV)
 
 # Content/input directory
