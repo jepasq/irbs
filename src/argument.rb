@@ -22,7 +22,9 @@ class Argument
     ## but before, remove all non-arguments ones
     argv2 = argv.select{|e| e.start_with? '-'}
     ttt.delete_if do |elem|
-      elem.aliases.include? argv2[0]
+      argv2.each do |e2|
+        elem.aliases.include? e2
+      end
     end
     
     msg = ttt.join(',')
@@ -32,6 +34,16 @@ class Argument
       # Remove the test one so we can know wich one wasn't handled
       break if o.fire_if argv
     end
+  end
+
+  # Return a copy of the array passed as argument minus all
+  # dash-starting options
+  def only_dirs(args)
+    ttt = args
+    ttt.delete_if do |elem|
+      elem.start_with? '-'
+    end
+    ttt
   end
   
 end

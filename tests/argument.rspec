@@ -21,6 +21,12 @@ describe Argument do
 
     a.add arg1
   end
+
+  it "has a function to remove slash-based options" do
+    a = Argument.new    
+    expect(a.only_dirs(['-h', '--aze', 'aze'])).to eq(['aze'])
+    
+  end
 end	
 
 describe ArgumentOption do

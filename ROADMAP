@@ -39,6 +39,7 @@ CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 - [ ] Add rspec for example_001
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-08-04 ven. 01:59]--[2023-08-04 ven. 02:14] =>  0:15
 CLOCK: [2023-08-04 ven. 01:02]--[2023-08-04 ven. 01:21] =>  0:19
 CLOCK: [2023-08-02 mer. 02:58]--[2023-08-02 mer. 03:22] =>  0:24
 CLOCK: [2023-08-02 mer. 02:42]--[2023-08-02 mer. 02:52] =>  0:10
@@ -70,7 +71,7 @@ Based on a static generator tool but to a fully REST server
   - [X] Must consume encountered options from ARGV list to let raise an
     error for unrecognized option
 - [X] When consuming options, should only keep the ones starting with '-'
-- [ ] Add an Argument function that returns arguments minux options with leading
+- [X] Add an Argument function that returns arguments minux options with leading
   dash
 - [ ] Fix actual unit tests error
 - [ ] Must find a way to handle '-' starting option and raise an
