@@ -1,3 +1,13 @@
+* v0.0.0-3 (01 Aug. 2023 - 04 Aug. 2023) SLOC 101
+- Implement Argument#only_dirs function
+- Better arguments error handling using delete_if
+- Add basic Server class with first instance vars
+- Add empty non-interactive and endpoint options
+- Finally wrote the base of first example
+- Only consume options starting with a dash
+- Affect block parameter as actions
+- Remove all to-be-handled arguments from a copied array
+
 * v0.0.0-2 (18 Jul. 2023 - 01 Aug. 2023) SLOC 63
 - Argument correctly consume encountered arguments
 - Print arguments options in usage text
