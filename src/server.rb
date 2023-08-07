@@ -8,5 +8,12 @@ class Server
     @endpoint    = '/'
     @port        = 8082
   end
-  
+
+  # Return the actual endpoint to a ruby Classname
+  def endpoint_to_classname
+    if @endpoint = '/'
+      "Home"
+    else
+      @endpoint.capitalize
+    end  
 end

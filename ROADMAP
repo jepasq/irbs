@@ -39,6 +39,7 @@ CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 - [ ] Add rspec for example_001
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-08-07 lun. 05:27]--[2023-08-07 lun. 05:47] =>  0:20
 CLOCK: [2023-08-07 lun. 03:09]--[2023-08-07 lun. 03:27] =>  0:18
 CLOCK: [2023-08-04 ven. 01:59]--[2023-08-04 ven. 02:14] =>  0:15
 CLOCK: [2023-08-04 ven. 01:02]--[2023-08-04 ven. 01:21] =>  0:19
@@ -74,12 +75,12 @@ Based on a static generator tool but to a fully REST server
 - [X] When consuming options, should only keep the ones starting with '-'
 - [X] Add an Argument function that returns arguments minux options with leading
   dash
-- [ ] Fix actual unit tests error
-- [ ] Must find a way to handle '-' starting option and raise an
+- [X] Must find a way to handle '-' starting option and raise an
   exception if not handled
+- [X] Default opened page/class may be Home or Root but must be configurable
+- [ ] Fix actual unit tests error
 - [ ] -?, -h or --help may print a usage message
 - [ ] Must have an option to print page to stdout for test purpose
-- [ ] Default opened page/class may be Home or Root but must be configurable
 - [ ] Test that usage text contains appname and version    
 - [ ] The main entry file could be a ruby-based DSL to configure server
   host, port etc...
