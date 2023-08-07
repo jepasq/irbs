@@ -39,6 +39,7 @@ CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 - [ ] Add rspec for example_001
 **** TODO Open a web server based on a DSL-based ruby configuration file
 :LOGBOOK:
+CLOCK: [2023-08-07 lun. 03:09]--[2023-08-07 lun. 03:27] =>  0:18
 CLOCK: [2023-08-04 ven. 01:59]--[2023-08-04 ven. 02:14] =>  0:15
 CLOCK: [2023-08-04 ven. 01:02]--[2023-08-04 ven. 01:21] =>  0:19
 CLOCK: [2023-08-02 mer. 02:58]--[2023-08-02 mer. 03:22] =>  0:24

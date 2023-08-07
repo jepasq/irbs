@@ -39,6 +39,7 @@ describe MainScript do
 
   it "has a usage option" do
     output = `#{script} --help`
+    p output
     expect(output.include? "usage").to be true
 
     output = `#{script} -h`

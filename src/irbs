@@ -34,7 +34,6 @@ end
 ni.add_alias "-n"
 arg.add ni
 
-
 ep = ArgumentOption.new('--endpoint',
                           'The endpoint to print in non-interactive mode.') do
   srv.endpoint = ARGV[ARGV.index('--endpoint') + 1]
@@ -51,11 +50,11 @@ end
 po.add_alias "-p"
 arg.add po
 
-
 arg.consume(ARGV)
 
 # Content/input directory
-dir = ARGV[0]
+dirs = arg.only_dirs(ARGV)
+dir = dirs[0]
 if dir.nil?
   dir = Dir.pwd
 else

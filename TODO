@@ -9,4 +9,4 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-4 (04 Aug. 2023 - ???) SLOC ???
-
+- (1) Check for directory in only_dirs result
