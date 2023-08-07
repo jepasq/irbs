@@ -11,20 +11,6 @@ srv = Server.new
 
 arg=Argument.new
 
-help = ArgumentOption.new('--help', 'Show usage text and exit') do
-  puts "irbs v#{VERSION}-#{REVISION} usage text :\n"
-  puts "An Inspection/Representation Based web Server."
-  
-  puts "\nOptions :"
-  puts "  --help, -h, -?   Print this usage text and exit with 0 exit status."
-  arg.opts.each do a
-    puts "  #{a.full_text}"
-  end
-  exit(0)
-end
-help.add_alias "-h"
-help.add_alias "-?"
-arg.add(help)
 
 ni = ArgumentOption.new('--non-interactive',
                           'Print endpoint to console and exit.') do
@@ -50,6 +36,7 @@ end
 po.add_alias "-p"
 arg.add po
 
+arg.add_usage
 arg.consume(ARGV)
 
 # Content/input directory

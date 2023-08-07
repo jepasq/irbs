@@ -45,6 +45,23 @@ class Argument
     end
     ttt
   end
+
+  def add_usage
+    help = ArgumentOption.new('--help', 'Show usage text and exit') do
+      puts "irbs v#{VERSION}-#{REVISION} usage text :\n"
+      puts "An Inspection/Representation Based web Server."
+      
+      puts "\nOptions :"
+      puts "  --help, -h, -?   Print this usage text and exit with 0 status."
+      @opts.each do a
+        puts "  #{a.full_text}"
+      end
+      exit(0)
+    end
+    help.add_alias "-h"
+    help.add_alias "-?"
+    add(help)
+  end
   
 end
 

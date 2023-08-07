@@ -11,9 +11,11 @@ class Server
 
   # Return the actual endpoint to a ruby Classname
   def endpoint_to_classname
-    if @endpoint = '/'
+    if @endpoint == '/'
       "Home"
     else
       @endpoint.capitalize
-    end  
+    end
+  end
+    
 end
