@@ -29,12 +29,15 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
   
 **** Start to implement examples andd associated unit tests
 :LOGBOOK:
+CLOCK: [2023-08-09 mer. 06:42]--[2023-08-09 mer. 07:13] =>  0:31
 CLOCK: [2023-08-03 jeu. 03:34]--[2023-08-03 jeu. 03:50] =>  0:16
 CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 :END:
 - [X] Must have a -n,--non-interactive and  -e --endpoint='/' arguments
 - [X] Maybe create the Server class with interactive and endpoint vars
 - [ ] examples/001_app work
+- [ ] May define favicon with DSL
+- [ ] How to define page title in class ?    
 - [ ] How to handle endpoint argument : now test it
 - [ ] Add rspec for example_001
 **** TODO Open a web server based on a DSL-based ruby configuration file (2)

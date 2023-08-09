@@ -1,8 +1,10 @@
 require_relative 'config_parser.rb'
 
+require 'socket'
+
 # The main server
 class Server
-  attr_reader :interactive, :endpoint, :port
+  attr_reader :interactive, :endpoint
 
   def initialize
     @interactive = true
@@ -27,8 +29,35 @@ class Server
     # (Search for 'Parsing source' h3 header
     content = File.read(script)
     parser = ConfigParser.new
-    parser.instance_eval(content)
+    begin
+      parser.instance_eval(content)
+    rescue => e
+      puts "Failed to parse #{script} : #{e}"
+      exit(1)
+    end
     parser
+
+    # Open server
+    p = parser.port
+    socket = TCPServer.new(p)
+    puts "Listening on port #{p}"
+    loop do                                                  
+      client = socket.accept                                 
+      first_line = client.gets                               
+      verb, path, _ = first_line.split                       
+      
+      if verb == 'GET'                                       
+        puts "Client connected to #{path}"
+        response = "HTTP/1.1 200\r\n\r\nHTML content goes here!!"
+        client.puts(response)                              
+      end                                                    
+      
+      client.close                                           
+    end                                                      
+    
+    socket.close  
+
+    
   end
   
 end

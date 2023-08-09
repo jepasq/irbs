@@ -1,16 +1,21 @@
 class ConfigParser
-
-  def inititalize
+  attr_accessor :port, :routes
+  
+  def initialize
     @port = 8082
-    @route = []
+    @routes = Hash.new
   end
 
-  def port(p)
+  def port=(p)
     @port = p
   end
 
   def route(&block)
     yield
+  end
+
+  def endpoint(a, b)
+    @routes[a] = b
   end
   
 end
