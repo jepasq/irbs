@@ -1,3 +1,4 @@
+require_relative 'config_parser.rb'
 
 # The main server
 class Server
@@ -6,7 +7,6 @@ class Server
   def initialize
     @interactive = true
     @endpoint    = '/'
-    @port        = 8082
   end
 
   # Return the actual endpoint to a ruby Classname
@@ -17,5 +17,18 @@ class Server
       @endpoint.capitalize
     end
   end
-    
+
+  # Run from the given directory
+  def run(directory)
+    script = File.join(directory, 'config.rb')
+    puts "Opening project configuration from '#{script}'..."
+
+    # From https://www.paweldabrowski.com/articles/building-dsl-with-ruby
+    # (Search for 'Parsing source' h3 header
+    content = File.read(script)
+    parser = ConfigParser.new
+    parser.instance_eval(content)
+    parser
+  end
+  
 end

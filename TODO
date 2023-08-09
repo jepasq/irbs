@@ -9,6 +9,7 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-4 (04 Aug. 2023 - ???) SLOC ???
-- (3) Server#add_usage implementation
+- (4) Start to implement the config DSL parser
+- Server#add_usage implementation
 - Must have a way to change endpoint to classname
 - Check for directory in only_dirs result

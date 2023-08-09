@@ -52,3 +52,4 @@ unless File.directory? dir
   raise "Directory passed as first argument (#{dir}) doesn't exist"
 end  
 
+srv.run dir
