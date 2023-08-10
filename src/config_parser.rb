@@ -10,6 +10,10 @@ class ConfigParser
     @port = p
   end
 
+  def favicon=(p)
+    @routes['/favicon.ico'] = p
+  end
+  
   def route(&block)
     yield
   end

@@ -5,7 +5,6 @@ class Application
   def to_s
     "<body>
         Hello world!</br
-        Salut Khean
      </body>"       
   end
 end

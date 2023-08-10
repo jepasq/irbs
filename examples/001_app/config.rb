@@ -2,6 +2,8 @@
 
 port= 20004 # Change current port
 
+favicon='favicon.ico'
+
 # Configure the router
 route do
   endpoint :root, 'Application'
