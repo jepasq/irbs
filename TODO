@@ -8,12 +8,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     Update version and revision in src/irbs header constants.
     SLOC is the result of `sloc src/`
 
-* v0.0.0-4 (04 Aug. 2023 - ???) SLOC ???
-- (8) Add favicon handling to DSL
-- First instance of Application for first example
-- Better client ID output and success status handling
-- Correctly open TCP server on DSL-based given port
-- Start to implement the config DSL parser
-- Server#add_usage implementation
-- Must have a way to change endpoint to classname
-- Check for directory in only_dirs result
+* v0.0.0-5 (10 Aug. 2023 - ???) SLOC ???
+
