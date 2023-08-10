@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-4 (04 Aug. 2023 - ???) SLOC ???
-- (5) Correctly open TCP server on DSL-based given port
+- (6) Better client ID output and success status handling
+- Correctly open TCP server on DSL-based given port
 - Start to implement the config DSL parser
 - Server#add_usage implementation
 - Must have a way to change endpoint to classname
