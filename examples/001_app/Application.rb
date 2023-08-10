@@ -4,7 +4,8 @@ class Application
   # to print it as a webpage!
   def to_s
     "<body>
-        Hello world!
+        Hello world!</br
+        Salut Khean
      </body>"       
   end
 end

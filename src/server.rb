@@ -35,7 +35,6 @@ class Server
       puts "Failed to parse #{script} : #{e}"
       exit(1)
     end
-    parser
 
     # Open server
     p = parser.port
@@ -49,15 +48,22 @@ class Server
       # clp: [address_family, port, hostname, numeric_address]
       clp = client.peeraddr
       cl = "#{clp[0]}=> #{clp[2]}:#{clp[1]}"
-      
-      if verb == 'GET'                                   
+
+      if verb == 'GET'
+        slur = :root if path == '/'
         puts "#{cl} GET #{path}"
-        client.puts(success("HTML content goes here!!"))
+        text="HTML content goes here!!"
+        classn =  parser.routes[slur].capitalize
+        classfile = File.join(directory, classn + '.rb')
+        require classfile
+        # see https://stackoverflow.com/a/5924555
+        instance = Kernel.const_get(classn).new
+        puts "Instancing '#{classn}' from '#{classfile}'"
+        client.puts(success(instance.to_s))
       end                                                    
       
       client.close                                           
     end                                                      
-    
     socket.close  
   end
 
