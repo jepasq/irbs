@@ -29,6 +29,7 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
   
 **** Start to implement examples andd associated unit tests
 :LOGBOOK:
+CLOCK: [2023-08-11 ven. 07:53]--[2023-08-11 ven. 08:20] =>  0:27
 CLOCK: [2023-08-11 ven. 03:30]--[2023-08-11 ven. 04:10] =>  0:40
 CLOCK: [2023-08-10 jeu. 04:00]--[2023-08-10 jeu. 04:36] =>  0:36
 CLOCK: [2023-08-10 jeu. 03:37]--[2023-08-10 jeu. 03:55] =>  0:18
@@ -40,10 +41,11 @@ CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 - [X] Maybe create the Server class with interactive and endpoint vars
 - [X] examples/001_app work
   Must use routes to show Application content
-- [ ] May define favicon with DSL
+- [-] May define favicon with DSL
   Add =<link rel="icon" type="image/vnd.icon" href="checmin.ico">=
   type can be image/png or image/gif according to the extension
-  - [ ] Check if the file can be found
+  - [X] Check if the file can be found
+  - [ ] Add a unit test for the created <link> markup  
 - [ ] How to define page title in class ?    
 - [ ] How to handle endpoint argument : now test it
 - [ ] Add rspec for example_001

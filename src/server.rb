@@ -42,6 +42,7 @@ class Server
     # favicon handling
     if parser.routes['/favicon.ico'] then
       fav = Favicon.new(File.join(directory, parser.routes['/favicon.ico']))
+      p "Adding favicon code #{fav}"
       page = page + fav.to_s
     end
     
@@ -61,7 +62,7 @@ class Server
       if verb == 'GET'
         if path == '/'
           slur = :root
-        elsif path = '/favicon.ico'
+        elsif path == '/favicon.ico'
           break
         else
           slur = path

@@ -6,10 +6,10 @@ class Favicon
 
   def mime_type
     ext = File.extname(@path).downcase
-    p ext
+    MIME::Types.type_for(ext)
   end
   
   def to_s
-    "<link rel='icon' type='#{mime_type}' href='#{@path}'>"
+    "<link rel='icon' type='#{mime_type[0].to_s}' href='#{@path}'>"
   end
 end

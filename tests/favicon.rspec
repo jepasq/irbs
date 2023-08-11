@@ -1,0 +1,18 @@
+#                                          -*-ruby-*-
+
+require 'favicon'
+
+require 'mime-types'
+
+describe Favicon do
+  it "can be instantiated with a path parameter" do
+    f = Favicon.new('path')
+    expect(f.nil?).to be false    
+  end
+
+  it "returns mime type of ico file" do
+    f = Favicon.new('path.ico')
+    # f.mime_type returns an array 
+    expect(f.mime_type[1].like? "image/x-icon").to be true
+  end
+end
