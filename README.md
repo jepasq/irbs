@@ -6,7 +6,7 @@ Inspection/Representation Based web Server.
 
 You must install rspec before running unit tests :
 
-	sudo pamac install ruby-rspec 
+	sudo pamac install ruby-rspec ruby-yard
 
 Dependencies are listed in a *Gemfile*. To install all at once :
 
@@ -30,3 +30,10 @@ using the following command :
 
 	make check
 
+## API documentation
+
+To generate or update *API documentation*, plus run `yard` then open
+
+	doc/index.html 
+	
+file. A good start point is the Server class.

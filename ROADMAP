@@ -22,11 +22,19 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
   Does it work for functions ?
 - [ ] if #funcname found, run this function from 
 **** Handle Unit tests and API documentation
+:LOGBOOK:
+CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
+:END:
 - [ ] The non-interactive option must work
 - [ ] Maybe based on RSpec
   - [ ] Main script can be found, is executable and return an error status code
     when called on an inexisting dir
 - [ ] From test/ directory. Add a Makefile rule for that
+
+- [ ] Testing API doc generationwith yard
+  =yard stats --list-undoc= for undocumented members
+  =yard doc src=
+  =open doc/index.html=
   
 **** Start to implement examples andd associated unit tests
 :LOGBOOK:

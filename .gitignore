@@ -3,3 +3,7 @@
 # local bundle dir
 .bundle/
 vendor/
+
+# API documentation directory
+doc/
+.yardoc/
