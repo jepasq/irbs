@@ -9,5 +9,6 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-5 (10 Aug. 2023 - ???) SLOC ???
-- (2) Add a couple of Favicon unit tests
+- (3) Start page_content server implementation
+- Add a couple of Favicon unit tests
 - Start to implement favicon class and handling code

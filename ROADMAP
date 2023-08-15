@@ -22,6 +22,7 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
   Does it work for functions ?
 - [ ] if #funcname found, run this function from 
 **** Handle Unit tests and API documentation
+- [ ] The non-interactive option must work
 - [ ] Maybe based on RSpec
   - [ ] Main script can be found, is executable and return an error status code
     when called on an inexisting dir
@@ -29,6 +30,7 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
   
 **** Start to implement examples andd associated unit tests
 :LOGBOOK:
+CLOCK: [2023-08-15 mar. 05:20]--[2023-08-15 mar. 06:08] =>  0:48
 CLOCK: [2023-08-11 ven. 07:53]--[2023-08-11 ven. 08:20] =>  0:27
 CLOCK: [2023-08-11 ven. 03:30]--[2023-08-11 ven. 04:10] =>  0:40
 CLOCK: [2023-08-10 jeu. 04:00]--[2023-08-10 jeu. 04:36] =>  0:36

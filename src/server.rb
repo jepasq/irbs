@@ -10,6 +10,7 @@ class Server
   def initialize
     @interactive = true
     @endpoint    = '/'
+    @directory = "~"
   end
 
   # Return the actual endpoint to a ruby Classname
@@ -21,8 +22,26 @@ class Server
     end
   end
 
+  def page_content(slur)
+    classn=""
+    begin
+      classn =  parser.routes[slur].capitalize
+    rescue
+      puts "WARN: can't get classname from slur '#{slur}'"
+    end
+
+    classfile = File.join(@directory, classn + '.rb')
+    require classfile
+    # see https://stackoverflow.com/a/5924555
+    instance = Kernel.const_get(classn).new
+    puts "Instancing '#{classn}' from '#{classfile}'"
+    instance.to_s
+  end
+  
   # Run from the given directory
   def run(directory)
+    @directory = directory
+    
     script = File.join(directory, 'config.rb')
     puts "Opening project configuration from '#{script}'"
     # The content of the HTML page
@@ -44,6 +63,11 @@ class Server
       fav = Favicon.new(File.join(directory, parser.routes['/favicon.ico']))
       p "Adding favicon code #{fav}"
       page = page + fav.to_s
+    end
+
+    if not @interactive 
+      puts page_content(:root)
+      exit(0) 
     end
     
     # Open server
@@ -69,22 +93,13 @@ class Server
         end
         puts "#{cl} GET #{path}"
         text="HTML content goes here!!"
-        begin
-          classn =  parser.routes[slur].capitalize
-        rescue
-          puts "WARN: can't get classname from slur '#{slur}'"
-        end
-        classfile = File.join(directory, classn + '.rb')
-        require classfile
-        # see https://stackoverflow.com/a/5924555
-        instance = Kernel.const_get(classn).new
-        puts "Instancing '#{classn}' from '#{classfile}'"
-        client.puts(success(page + instance.to_s))
+        text=page + page_content(slur)
+        client.puts(success(text))
       end                                                    
       
       client.close                                           
     end                                                      
-    socket.close  
+    socket.close
   end
 
   # A simple HTTP 200 response text shortcut
