@@ -44,17 +44,18 @@ class Server
     
     script = File.join(directory, 'config.rb')
     puts "Opening project configuration from '#{script}'"
+
     # The content of the HTML page
     page = ""
     
     # From https://www.paweldabrowski.com/articles/building-dsl-with-ruby
     # (Search for 'Parsing source' h3 header
-    content = File.read(script)
     parser = ConfigParser.new
     begin
+      content = File.read(script)
       parser.instance_eval(content)
     rescue => e
-      puts "Failed to parse #{script} : #{e}"
+      puts "Failed to open parse #{script} : #{e}"
       exit(1)
     end
 
