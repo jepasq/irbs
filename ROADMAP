@@ -38,6 +38,7 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
   
 **** Start to implement examples andd associated unit tests
 :LOGBOOK:
+CLOCK: [2023-08-16 mer. 04:41]--[2023-08-16 mer. 05:01] =>  0:20
 CLOCK: [2023-08-15 mar. 05:20]--[2023-08-15 mar. 06:08] =>  0:48
 CLOCK: [2023-08-11 ven. 07:53]--[2023-08-11 ven. 08:20] =>  0:27
 CLOCK: [2023-08-11 ven. 03:30]--[2023-08-11 ven. 04:10] =>  0:40
@@ -47,10 +48,12 @@ CLOCK: [2023-08-09 mer. 06:42]--[2023-08-09 mer. 07:13] =>  0:31
 CLOCK: [2023-08-03 jeu. 03:34]--[2023-08-03 jeu. 03:50] =>  0:16
 CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 :END:
-- [X] Must have a -n,--non-interactive and  -e --endpoint='/' arguments
 - [X] Maybe create the Server class with interactive and endpoint vars
 - [X] examples/001_app work
   Must use routes to show Application content
+- [ ] Must have a -n,--non-interactive and  -e --endpoint='/' arguments
+  - [ ] The =-n,--non-interactive= option must work
+    Currently, examples/001_App is broking unit tests (listening to the port)
 - [-] May define favicon with DSL
   Add =<link rel="icon" type="image/vnd.icon" href="checmin.ico">=
   type can be image/png or image/gif according to the extension

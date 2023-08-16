@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-5 (10 Aug. 2023 - ???) SLOC ???
-- (5) Add rspec for example/001_App
+- (6) Non-interactive option work
+- Add rspec for example/001_App
 - Start to generate API documentation
 - Start page_content server implementation
 - Add a couple of Favicon unit tests

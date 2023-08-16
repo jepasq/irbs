@@ -28,7 +28,7 @@ class Argument
     end
     
     msg = ttt.join(',')
-#    raise "#{msg} argument(s) unknown" unless ttt.empty?
+    raise "#{msg} argument(s) unknown" unless ttt.empty?
     
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
