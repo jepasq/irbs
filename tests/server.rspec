@@ -1,0 +1,16 @@
+#                                          -*-ruby-*-
+
+require 'server'
+
+describe Server do
+  it "handle interactive to string representation" do
+    s = Server.new
+
+    s.interactive= true
+    expect(s.interactive_to_s).to eq "interactive"
+
+    s.interactive= false
+    expect(s.interactive_to_s).to eq "non interactive"
+  end
+
+end

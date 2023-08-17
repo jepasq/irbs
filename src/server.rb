@@ -5,7 +5,7 @@ require 'socket'
 
 # The main server
 class Server
-  attr_reader :interactive, :endpoint
+  attr_accessor :interactive, :endpoint
 
   def initialize
     @interactive = true
@@ -37,10 +37,19 @@ class Server
     puts "Instancing '#{classn}' from '#{classfile}'"
     instance.to_s
   end
+
+  def interactive_to_s
+    ret = ""
+    ret += "non " unless @interactive
+    ret += "interactive"
+    ret 
+  end
   
   # Run from the given directory
   def run(directory)
     @directory = directory
+
+    puts "Entering #{interactive_to_s} mode"
     
     script = File.join(directory, 'config.rb')
     puts "Opening project configuration from '#{script}'"
