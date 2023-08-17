@@ -30,7 +30,7 @@ arg.add ep
 
 po = ArgumentOption.new('--port',
                           'The port to listen client from.') do
-  srv.endpoint = ARGV[ARGV.index('--port') + 1]
+  srv.port = ARGV[ARGV.index('--port') + 1]
   exit(0)
 end
 po.add_alias "-p"

@@ -1,6 +1,7 @@
 #                                          -*-ruby-*-
 
 require 'argument'
+require 'server'
 
 describe Argument do
   it "can be instantiated" do
@@ -25,8 +26,26 @@ describe Argument do
   it "has a function to remove slash-based options" do
     a = Argument.new    
     expect(a.only_dirs(['-h', '--aze', 'aze'])).to eq(['aze'])
-    
   end
+
+  it "Raise error if consume arg isn't an array" do
+    arg = Argument.new
+    expect { arg.consume('aze') }.to raise_error(ArgumentError)
+
+    arg.consume(['aze', 'zer'])
+  end
+  
+  it "can set Server's interactive mode from a callback" do
+    srv=Server.new   # interactive by default
+    arg = Argument.new
+    ni = ArgumentOption.new('--non-interactive', '...') do
+      srv.interactive = false
+    end
+    arg.add ni
+    arg.consume(['--non-interactive'])
+    expect(srv.interactive).to eq(false)
+  end
+  
 end	
 
 describe ArgumentOption do

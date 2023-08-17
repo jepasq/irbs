@@ -5,6 +5,7 @@
 *** v0.0.1
 **** Work on the representation parser
 :LOGBOOK:
+CLOCK: [2023-08-17 jeu. 04:41]--[2023-08-17 jeu. 04:55] =>  0:14
 CLOCK: [2023-08-17 jeu. 04:17]--[2023-08-17 jeu. 04:25] =>  0:08
 CLOCK: [2023-08-02 mer. 06:51]--[2023-08-02 mer. 07:02] =>  0:11
 :END:
@@ -27,6 +28,7 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
 CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
 :END:
 - [ ] The non-interactive option must work
+  - [ ] Must fix the Argument#consume unit test
 - [ ] Maybe based on RSpec
   - [ ] Main script can be found, is executable and return an error status code
     when called on an inexisting dir
