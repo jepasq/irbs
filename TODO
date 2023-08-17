@@ -8,12 +8,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     Update version and revision in src/irbs header constants.
     SLOC is the result of `sloc src/`
 
-* v0.0.0-5 (10 Aug. 2023 - ???) SLOC ???
-- (8) Implement more argument unit tests
-- Server#interactive_to_s test and implementation
-- Non-interactive option work
-- Add rspec for example/001_App
-- Start to generate API documentation
-- Start page_content server implementation
-- Add a couple of Favicon unit tests
-- Start to implement favicon class and handling code
+* v0.0.0-6 (17 Aug. 2023 - ???) SLOC ???
+
