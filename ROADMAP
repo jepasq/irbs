@@ -5,11 +5,17 @@
 *** v0.0.1
 **** Work on the representation parser
 :LOGBOOK:
+CLOCK: [2023-08-18 ven. 03:20]--[2023-08-18 ven. 03:35] =>  0:15
 CLOCK: [2023-08-17 jeu. 04:41]--[2023-08-17 jeu. 04:55] =>  0:14
 CLOCK: [2023-08-17 jeu. 04:17]--[2023-08-17 jeu. 04:25] =>  0:08
 CLOCK: [2023-08-02 mer. 06:51]--[2023-08-02 mer. 07:02] =>  0:11
 :END:
-- [ ] First tests in examples/001_app
+- [X] First tests in examples/001_app
+- [ ] Then, nested object in examples/002_nested
+  Tested, waiting for non-interactive mode
+- [ ] How to handle nester object with constructor
+- [ ] How to handle page title ?
+  A simple title return function
 - [ ] Could be find if it works as (return should be implicite)
 #+BEGIN_EXAMPLE
     def to_s

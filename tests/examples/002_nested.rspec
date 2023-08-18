@@ -1,0 +1,11 @@
+#                                          -*-ruby-*-
+
+# Tests for the 001_app example
+script='src/irbs'
+
+describe "Example_002Nested" do
+  it "can be ran non-interactively" do
+    output = `#{script} --non-interactive examples/002_nested 2>&1`
+    expect(output).to include("sideb4r")
+  end
+end
