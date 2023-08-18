@@ -30,6 +30,11 @@ using the following command :
 
 	make check
 
+You can also running individual test if you correctly include *src/* files
+ans call rspec through bundle. For example to run argument unit tests only :
+
+	bundle exec rspec -I src/ tests/argument.rspec
+
 ## API documentation
 
 To generate or update *API documentation*, plus run `yard` then open

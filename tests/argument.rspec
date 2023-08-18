@@ -34,6 +34,17 @@ describe Argument do
 
     arg.consume(['aze', 'zer'])
   end
+
+  it "can set Server's interactive mode using a single letter option" do
+    srv=Server.new   # interactive by default
+    arg = Argument.new
+    ni = ArgumentOption.new('-n', '...') do
+      srv.interactive = false
+    end
+    arg.add ni
+    arg.consume(['-n'])
+    expect(srv.interactive).to eq(false)
+  end
   
   it "can set Server's interactive mode from a callback" do
     srv=Server.new   # interactive by default
