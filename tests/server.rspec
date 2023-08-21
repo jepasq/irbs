@@ -3,11 +3,12 @@
 require 'server'
 
 describe Server do
-  it "handle interactive to string representation" do
+  it "handles interactive to string representation" do
     s = Server.new
 
     s.interactive= true
-    expect(s.interactive_to_s).to eq "interactive"
+    expect(s.interactive_to_s).to     eq "interactive"
+    expect(s.interactive_to_s).not_to eq "non"
 
     s.interactive= false
     expect(s.interactive_to_s).to eq "non interactive"

@@ -18,7 +18,7 @@ class Argument
 
   def consume(argv)
     raise ArgumentError.new("argv must be an array") unless argv.is_a?(Array)
-    
+
     # Remove all to-be-handled arguments from a copied array
     ttt= @opts
     ## but before, remove all non-arguments ones
@@ -32,7 +32,6 @@ class Argument
     msg = ttt.join(',')
     raise "#{msg} argument(s) unknown" unless ttt.empty?
 
-    puts "Working on remaining opts #{@opts}"
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
       break if o.fire_if argv
