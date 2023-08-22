@@ -7,6 +7,9 @@ require 'socket'
 class Server
   attr_accessor :interactive, :endpoint
 
+  # Return a new interactive Server instance
+  #
+  # The #endpoint attribute is set to '/'.
   def initialize
     @interactive = true
     @endpoint    = '/'
@@ -38,6 +41,9 @@ class Server
     instance.to_s
   end
 
+  # Return a string representation of the @interactive field
+  #
+  # @return [String] a human readable representation.
   def interactive_to_s
     ret = ""
     ret += "non " unless @interactive

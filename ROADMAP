@@ -40,10 +40,12 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
     when called on an inexisting dir
 - [ ] From test/ directory. Add a Makefile rule for that
 
-- [ ] Testing API doc generationwith yard
+- [ ] Testing API doc generation with yard
   =yard stats --list-undoc= for undocumented members
   =yard doc src=
   =open doc/index.html=
+  or
+  =yard server --reload=
   
 **** TODO Open a web server based on a DSL-based ruby configuration file (2)
 :LOGBOOK:
@@ -63,6 +65,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   Unit tests may be based on this examples and the main script return value
 **** Start to implement examples andd associated unit tests
 :LOGBOOK:
+CLOCK: [2023-08-22 mar. 02:42]--[2023-08-22 mar. 03:49] =>  1:07
 CLOCK: [2023-08-21 lun. 01:47]--[2023-08-21 lun. 02:08] =>  0:21
 CLOCK: [2023-08-18 ven. 02:34]--[2023-08-18 ven. 03:01] =>  0:27
 CLOCK: [2023-08-16 mer. 04:41]--[2023-08-16 mer. 05:01] =>  0:20
@@ -91,12 +94,12 @@ CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 - [ ] How to define page title in class ?    
 - [ ] How to handle endpoint argument : now test it
 - [ ] Add rspec for example_001
-**** TODO Correct project handling
+**** DONE Correct project handling
 :LOGBOOK:
 CLOCK: [2023-07-21 ven. 15:22]--[2023-07-21 ven. 15:30] =>  0:08
 :END:
 - [X] github should run CI
-- [ ] Make this project's github repo public
+- [X] Make this project's github repo public
 **** DONE Open a web server based on a DSL-based ruby configuration file (1)
 :LOGBOOK:
 CLOCK: [2023-08-08 mar. 01:29]--[2023-08-08 mar. 01:48] =>  0:19

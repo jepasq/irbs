@@ -86,15 +86,21 @@ class ArgumentOption
     @aliases << text
   end
 
+  # Fire the action if the arg value is included in @aliases array
+  #
+  # \return treu if fired, false otherwise
   def fire_if(arg)
     if @aliases.include? arg
-      @action
+      self.fire
       return true
     else
       return false
     end
   end
 
+  # Return all aliases and help text in a single string
+  #
+  # It is used to be print ed in terminal during usage message.
   def full_text
     ret  = sprintf "%10s", aliases.join(', ')
     ret += @help
