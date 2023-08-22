@@ -35,6 +35,18 @@ describe Argument do
     arg.consume(['aze', 'zer'])
   end
 
+  it "should raise an error if an argument is unknown" do
+    srv=Server.new   # interactive by default
+    arg = Argument.new
+    ni = ArgumentOption.new('-n', '...') do
+      srv.interactive = false
+    end
+    arg.add ni
+    expect { arg.raise_if_unknown_arg(['-w']) }.to raise_error(ArgumentError)
+    expect { arg.raise_if_unknown_arg(['--lw']) }.to raise_error(ArgumentError)
+
+  end
+  
   it "can set Server's interactive mode using a single letter option" do
     srv=Server.new   # interactive by default
     arg = Argument.new

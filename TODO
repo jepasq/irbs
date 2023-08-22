@@ -9,6 +9,7 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-6 (17 Aug. 2023 - ???) SLOC ???
-- (3) Little argument unit tests work
+- (4)  argument#raise_if_unknown_arg implementation and failing tests
+- Little argument unit tests work
 - Add a second example for nested class
 - Add an argument unit test trying to fix non-interactive mode

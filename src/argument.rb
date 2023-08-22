@@ -16,25 +16,34 @@ class Argument
     @opts << option
   end
 
-  def consume(argv)
-    raise ArgumentError.new("argv must be an array") unless argv.is_a?(Array)
-
+  # Raise an error if unknown argument is passed
+  def raise_if_unknown_arg(argv)
     # Remove all to-be-handled arguments from a copied array
-    ttt= @opts
+    ttt= @opts.dup
+    puts "#1 Running fire_if on #{@opts}"
+
     ## but before, remove all non-arguments ones
     argv2 = argv.select{|e| e.start_with? '-'}
+    p argv2
     ttt.delete_if do |elem|
       argv2.each do |e2|
         elem.aliases.include? e2
       end
     end
-    
-    msg = ttt.join(',')
-    raise "#{msg} argument(s) unknown" unless ttt.empty?
 
+    msg = ttt.join(',')
+    p msg
+    raise "#{msg} argument(s) unknown" unless ttt.empty?
+  end
+  
+  def consume(argv)
+    raise ArgumentError.new("argv must be an array") unless argv.is_a?(Array)
+    raise_if_unknown_arg(argv)
+
+    puts "#2 Running fire_if on #{@opts}"
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
-      break if o.fire_if argv
+      o.fire_if argv
     end
   end
 
