@@ -35,6 +35,11 @@ ans call rspec through bundle. For example to run argument unit tests only :
 
 	bundle exec rspec -I src/ tests/argument.rspec
 
+If you want to run a specific test, you can append line number after *rspec*
+file name :
+	
+	bundle exec rspec -I src/ tests/argument.rspec:38 	
+
 ## API documentation
 
 To generate or update *API documentation*, plus run `yard` then open

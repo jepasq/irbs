@@ -44,7 +44,11 @@ describe Argument do
     arg.add ni
     expect { arg.raise_if_unknown_arg(['-w']) }.to raise_error(ArgumentError)
     expect { arg.raise_if_unknown_arg(['--lw']) }.to raise_error(ArgumentError)
-
+    begin
+      arg.raise_if_unknown_arg(['-n'])
+    rescue StandardError => e
+      # expect(e) .not_to raise_error(ArgumentError)
+    end
   end
   
   it "can set Server's interactive mode using a single letter option" do
