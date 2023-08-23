@@ -25,6 +25,15 @@ class Server
     end
   end
 
+  # Returns representation of a page indentified by the given slur
+  #
+  # Here, the endpoint/slur will be use to get the class name from the router.
+  # Il will then be used to create the needed class instance.
+  #
+  # @param slur The part of URL we call endpoitn or slur.
+  #
+  # @return the instance content as string
+  #
   def page_content(slur)
     classn=""
     begin

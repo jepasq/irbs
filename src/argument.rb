@@ -37,9 +37,12 @@ class Argument
     raise ArgumentError.new("argv must be an array") unless argv.is_a?(Array)
     raise_if_unknown_arg(argv)
 
-    puts "#2 Running fire_if on #{@opts}"
+    optstr = @opts.map(&:aliases).join(", ")
+    puts "#2 Running fire_if on #{optstr} using #{argv}"
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
+      
+      puts "#2 Running fire_if on #{o.aliases} using #{argv}"
       o.fire_if argv
     end
   end
@@ -84,6 +87,7 @@ class ArgumentOption
     @aliases = [text]
   end  
 
+  # Fire the instance's action
   def fire
     @action.call
   end
@@ -94,7 +98,7 @@ class ArgumentOption
 
   # Fire the action if the arg value is included in @aliases array
   #
-  # \return treu if fired, false otherwise
+  # \return true if fired, false otherwise
   def fire_if(arg)
     if @aliases.include? arg
       self.fire

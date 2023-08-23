@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-6 (17 Aug. 2023 - ???) SLOC ???
-- (5) Fix an important argument#raise_if_unknown_arg delete_if+any bug
+- (6) Improve debugging and API documentation
+- Fix an important argument#raise_if_unknown_arg delete_if+any bug
 - argument#raise_if_unknown_arg implementation and failing tests
 - Little argument unit tests work
 - Add a second example for nested class

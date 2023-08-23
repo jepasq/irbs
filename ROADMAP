@@ -31,6 +31,7 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
 - [ ] if #funcname found, run this function from 
 **** Handle Unit tests and API documentation
 :LOGBOOK:
+CLOCK: [2023-08-23 mer. 05:23]--[2023-08-23 mer. 05:36] =>  0:13
 CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
 :END:
 - [ ] The non-interactive option must work
@@ -83,11 +84,12 @@ CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 - [X] Maybe create the Server class with interactive and endpoint vars
 - [X] examples/001_app work
   Must use routes to show Application content
-- [ ] Must have a -n,--non-interactive and  -e --endpoint='/' arguments
-  - [ ] The =-n,--non-interactive= option must work
+- [-] Must have a -n,--non-interactive and  -e --endpoint='/' arguments
+  - [X] The =-n,--non-interactive= option must work
     Currently, examples/001_App is broking unit tests (listening to the port)
     So we're testing in tests/argument.rspec
     =bundle exec rspec -I src/ tests/argument.rspec=
+  - [ ] Next one is =bundle exec rspec -I src/ tests/argument.rspec:54=
 - [-] May define favicon with DSL
   Add =<link rel="icon" type="image/vnd.icon" href="checmin.ico">=
   type can be image/png or image/gif according to the extension
