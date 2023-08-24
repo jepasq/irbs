@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 VERSION="0.0.0"
-REVISION=5
+REVISION=6
 
 # Argument handling
 require_relative 'argument'

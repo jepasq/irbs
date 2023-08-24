@@ -1,3 +1,13 @@
+* v0.0.0-6 (17 Aug. 2023 - 24 Aug. 2023) SLOC 339
+- Improve ConfigParser API documentation
+- Add example and associated tests for page title feature
+- Improve debugging and API documentation
+- Fix an important argument#raise_if_unknown_arg delete_if+any bug
+- argument#raise_if_unknown_arg implementation and failing tests
+- Little argument unit tests work
+- Add a second example for nested class
+- Add an argument unit test trying to fix non-interactive mode
+
 * v0.0.0-5 (10 Aug. 2023 - 17 Aug. 2023) SLOC 269
 - Implement more argument unit tests
 - Server#interactive_to_s test and implementation
