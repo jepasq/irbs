@@ -5,7 +5,12 @@ require 'socket'
 
 # The main server
 class Server
-  attr_accessor :interactive, :endpoint
+  # A boolean setting if server must listen to client connection or simply
+  # print generated pages to stdout.
+  attr_accessor :interactive
+
+  # The URL the client try to connect to.
+  attr_accessor :endpoint
 
   # Return a new interactive Server instance
   #

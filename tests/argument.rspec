@@ -39,7 +39,7 @@ describe Argument do
     srv=Server.new   # interactive by default
     arg = Argument.new
     ni = ArgumentOption.new('-n', '...') do
-      srv.interactive = false
+      srv.interactive= false
     end
     arg.add ni
     expect { arg.raise_if_unknown_arg(['-w']) }.to raise_error(ArgumentError)
