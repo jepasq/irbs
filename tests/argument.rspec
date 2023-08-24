@@ -96,6 +96,5 @@ describe ArgumentOption do
     expect( arg1.fire_if('-a') ).to be false
     expect( arg1.fire_if('-h') ).to be true
     expect( arg1.fire_if('--help') ).to be true
-    
   end
 end

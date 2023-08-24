@@ -32,13 +32,14 @@ class Argument
     msg = ttt.join(',')
     raise ArgumentError.new "#{msg} argument(s) unknown" unless ttt.empty?
   end
-  
+
+  # Consume the given argv array and fire argument action if needed
+  #
+  # @param argv An array of string containing user's argument
   def consume(argv)
     raise ArgumentError.new("argv must be an array") unless argv.is_a?(Array)
     raise_if_unknown_arg(argv)
 
-    optstr = @opts.map(&:aliases).join(", ")
-    puts "#2 Running fire_if on #{optstr} using #{argv}"
     @opts.each do |o|
       # Remove the test one so we can know wich one wasn't handled
       

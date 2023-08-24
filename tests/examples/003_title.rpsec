@@ -1,0 +1,13 @@
+#                                          -*-ruby-*-
+
+# Tests for the 001_app example
+script='src/irbs'
+
+describe "Example_003Title" do
+  it "must contain title and pag€ texts" do
+    output = `#{script} --non-interactive examples/003_title 2>&1`
+    expect(output).to include("<title>")
+    expect(output).to include("</title>")
+    expect(output).to include("pag€")
+  end
+end
