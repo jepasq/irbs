@@ -67,6 +67,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   Unit tests may be based on this examples and the main script return value
 **** TODO Start to implement examples andd associated unit tests
 :LOGBOOK:
+CLOCK: [2023-08-28 lun. 03:47]--[2023-08-28 lun. 03:55] =>  0:08
 CLOCK: [2023-08-24 jeu. 03:27]--[2023-08-24 jeu. 03:54] =>  0:27
 CLOCK: [2023-08-23 mer. 02:13]--[2023-08-23 mer. 02:37] =>  0:24
 CLOCK: [2023-08-22 mar. 07:15]--[2023-08-22 mar. 07:49] =>  0:34
@@ -86,10 +87,15 @@ CLOCK: [2023-08-03 jeu. 03:17]--[2023-08-03 jeu. 03:29] =>  0:12
 - [X] Maybe create the Server class with interactive and endpoint vars
 - [X] examples/001_app work
   Must use routes to show Application content
+- [X] Implement Argument#fire_if for an array argument
+
 - [-] How to define page title in class
   - [X] Add a example for this and unit test (we need non-interactive here)
   - [ ] Must implement conf parser function for this
-    
+
+- [ ] We have an =raise_if_unknown_arg= error when running irbs manually
+  with the list of implemented options, maybe an array error
+
 - [-] Must have a -n,--non-interactive and  -e --endpoint='/' arguments
   - [X] The =-n,--non-interactive= option must work
     Currently, examples/001_App is broking unit tests (listening to the port)

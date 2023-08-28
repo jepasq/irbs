@@ -101,6 +101,10 @@ class ArgumentOption
   #
   # \return true if fired, false otherwise
   def fire_if(arg)
+    if arg.is_a? Array
+      fire_if_array arg
+    end
+
     if @aliases.include? arg
       self.fire
       return true
@@ -109,6 +113,12 @@ class ArgumentOption
     end
   end
 
+  def fire_if_array(arg)
+    arg.each do |a|
+      fire_if a
+    end
+  end
+  
   # Return all aliases and help text in a single string
   #
   # It is used to be print ed in terminal during usage message.
