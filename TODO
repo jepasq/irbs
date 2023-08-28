@@ -9,4 +9,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-7 (24 Aug. 2023 - ???) SLOC ???
-- (1) Implement Argument#fire_if for an array argument
+- (2) Move ArgumentOption in its own files
+- Implement Argument#fire_if for an array argument

@@ -76,25 +76,3 @@ describe Argument do
   
 end	
 
-describe ArgumentOption do
-  it "can fire yield later" do
-    val=0
-    arg1=ArgumentOption.new('-h', 'help text'){ val +=1 }
-    arg1.fire
-    expect( val ).to equal(1)
-  end
-
-  it "can have alias" do
-    arg1=ArgumentOption.new('-h', 'help text'){ }
-    arg1.add_alias "--help"
-  end
-
-  it "has a fire_if function" do
-    arg1=ArgumentOption.new('-h', 'help text'){ "aze" }
-    arg1.add_alias "--help"
-    
-    expect( arg1.fire_if('-a') ).to be false
-    expect( arg1.fire_if('-h') ).to be true
-    expect( arg1.fire_if('--help') ).to be true
-  end
-end
