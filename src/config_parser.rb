@@ -17,6 +17,7 @@ class ConfigParser
   def initialize
     @port = 8082
     @routes = Hash.new
+    @routes['root'] = 'application'
   end
 
   # Change the server's listening port

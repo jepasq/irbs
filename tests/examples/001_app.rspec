@@ -6,9 +6,6 @@ script='src/irbs'
 describe "Example_001App" do
   it "can be ran non-interactively" do
     output = `#{script} --non-interactive examples/001_app 2>&1`
-
-    p output
-    
-    expect(a.nil?).to be false    
+    expect(output.nil?).to be false    
   end
 end

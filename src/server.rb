@@ -45,6 +45,7 @@ class Server
       classn =  parser.routes[slur].capitalize
     rescue
       puts "WARN: can't get classname from slur '#{slur}'"
+      classn = 'Application'
     end
 
     classfile = File.join(@directory, classn + '.rb')

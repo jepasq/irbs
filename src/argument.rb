@@ -64,7 +64,7 @@ class Argument
       
       puts "\nOptions :"
       puts "  --help, -h, -?   Print this usage text and exit with 0 status."
-      @opts.each do a
+      @opts.each do |a|
         puts "  #{a.full_text}"
       end
       exit(0)
