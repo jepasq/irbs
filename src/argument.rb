@@ -21,19 +21,15 @@ class Argument
   # Raise an error if unknown argument is passed
   def raise_if_unknown_arg(argv)
     # Remove all to-be-handled arguments from a copied array
-    ttt= @opts.dup
+    ttt= argv.dup
 
     ## but before, remove all non-arguments ones
-    argv2 = argv.select{|e| e.start_with? '-'}
+    ttt = ttt.select{|e| e.start_with? '-'}
     ttt.delete_if do |elem|
-      argv2.any? do |e2|
-        elem.aliases.include?( e2)
+      argv.any? do |e2|
+        elem.include?( e2)
       end
     end
-
-    p argv2
-    p @opts.map(&:aliases)
-    p argv2 - @opts
     
     msg = ttt.join(',')
     raise ArgumentError.new "#{msg} argument(s) unknown" unless ttt.empty?
@@ -47,9 +43,6 @@ class Argument
     raise_if_unknown_arg(argv)
 
     @opts.each do |o|
-      # Remove the test one so we can know wich one wasn't handled
-      
-      puts "#2 Running fire_if on #{o.aliases} using #{argv}"
       o.fire_if argv
     end
   end
