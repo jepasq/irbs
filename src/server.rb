@@ -21,6 +21,15 @@ class Server
     @directory = "~"
   end
 
+  # Puts if interactive
+  def pii(msg)
+    if @interactive
+      puts msg
+    else
+#      STDERR.puts msg
+    end
+  end
+  
   # Return the actual endpoint to a ruby Classname
   def endpoint_to_classname
     if @endpoint == '/'
@@ -44,7 +53,7 @@ class Server
     begin
       classn =  parser.routes[slur].capitalize
     rescue
-      puts "WARN: can't get classname from slur '#{slur}'"
+      pii "WARN: can't get classname from slur '#{slur}'"
       classn = 'Application'
     end
 
@@ -52,7 +61,7 @@ class Server
     require classfile
     # see https://stackoverflow.com/a/5924555
     instance = Kernel.const_get(classn).new
-    puts "Instancing '#{classn}' from '#{classfile}'"
+    pii "Instancing '#{classn}' from '#{classfile}'"
     instance.to_s
   end
 
@@ -70,10 +79,10 @@ class Server
   def run(directory)
     @directory = directory
 
-    puts "Entering #{interactive_to_s} mode"
+    pii "Entering #{interactive_to_s} mode"
     
     script = File.join(directory, 'config.rb')
-    puts "Opening project configuration from '#{script}'"
+    pii "Opening project configuration from '#{script}'"
 
     # The content of the HTML page
     page = ""
@@ -92,7 +101,7 @@ class Server
     # favicon handling
     if parser.routes['/favicon.ico'] then
       fav = Favicon.new(File.join(directory, parser.routes['/favicon.ico']))
-      p "Adding favicon code #{fav}"
+      pii "Adding favicon code #{fav}"
       page = page + fav.to_s
     end
 

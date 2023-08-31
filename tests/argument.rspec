@@ -55,7 +55,6 @@ describe Argument do
     srv=Server.new   # interactive by default
     arg = Argument.new
     ni = ArgumentOption.new('-n', '...') do
-      p "in yield block"
       srv.interactive = false
     end
     arg.add ni

@@ -14,7 +14,6 @@ arg=Argument.new
 
 ni = ArgumentOption.new('--non-interactive',
                           'Print endpoint to console and exit.') do
-  puts "NI option triggered"
   srv.interactive = false
 end
 ni.add_alias "-n"
