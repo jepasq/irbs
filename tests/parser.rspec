@@ -1,0 +1,12 @@
+#                                          -*-ruby-*-
+
+require 'parser'
+
+describe Parser do
+  it "has a parse function" do
+    p = Parser.new
+
+    expect(p.parse("String")).to be_a String
+  end
+
+end
