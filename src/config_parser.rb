@@ -13,6 +13,10 @@ class ConfigParser
   #   :profile: => class defined in Profile.rb 
   attr_accessor :routes
 
+  # The current page title you can set with the title= function in the
+  # SDL script
+  attr_accessor :title
+  
   # The default calues for server configuration
   def initialize
     @port = 8082

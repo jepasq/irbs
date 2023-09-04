@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-7 (24 Aug. 2023 - ???) SLOC ???
-- (7) Improve API doc for favicon and parser classes
+- (8) Fix filename error for example 003_title
+- Improve API doc for favicon and parser classes
 - Add new parser class
 - Server#pii implementation and usage
 - Fix a routing error for root slur
