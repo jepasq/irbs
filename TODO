@@ -8,12 +8,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     Update version and revision in src/irbs header constants.
     SLOC is the result of `sloc src/`
 
-* v0.0.0-7 (24 Aug. 2023 - ???) SLOC ???
-- (8) Fix filename error for example 003_title
-- Improve API doc for favicon and parser classes
-- Add new parser class
-- Server#pii implementation and usage
-- Fix a routing error for root slur
-- Fix some issue with argt consume function
-- Move ArgumentOption in its own files
-- Implement Argument#fire_if for an array argument
+* v0.0.0-8 (04 Sep. 2023 - ???) SLOC ???
+
