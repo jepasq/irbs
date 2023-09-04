@@ -105,7 +105,8 @@ class Server
       page = page + fav.to_s
     end
 
-    if not @interactive 
+    if not @interactive
+      puts parser.title_content
       puts page_content(:root)
       exit(0) 
     end
@@ -132,7 +133,7 @@ class Server
           slur = path
         end
         puts "#{cl} GET #{path}"
-        text="HTML content goes here!!"
+        text=parser.title_content
         text=page + page_content(slur)
         client.puts(success(text))
       end                                                    

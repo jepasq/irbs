@@ -24,13 +24,6 @@ class ConfigParser
     @routes['root'] = 'application'
   end
 
-  # Change the server's listening port
-  #
-  # @param p The ne port as integer
-  def port=(p)
-    @port = p
-  end
-
   # Change the favicon
   #
   # @param p The new favicon filename
@@ -53,6 +46,10 @@ class ConfigParser
   # @param value The hash classname.
   def endpoint(key, value)
     @routes[key] = value
+  end
+
+  def title_content
+    "<title>#{@title}</title>" if title
   end
   
 end

@@ -1,6 +1,6 @@
 #                                          -*-ruby-*-
 
-require 'config_parser'
+require_relative '../../src/config_parser'
 
 # Tests for the 001_app example
 script='src/irbs'
@@ -9,7 +9,7 @@ describe "Example_003Title" do
 
   # A frshly created ConfigParser class must have a nil title
   it "must have a nil title" do
-    cp = ConfigParser
+    cp = ConfigParser.new
     expect(cp.title).to be nil
     
   end
