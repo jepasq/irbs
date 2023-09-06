@@ -5,8 +5,14 @@ require 'parser'
 describe Parser do
   it "has a parse function" do
     p = Parser.new
-
     expect(p.parse("String")).to be_a String
   end
 
+  it "should only parse string parameter" do
+    p = Parser.new
+    expect { p.parse(120)    }.to raise_error(ArgumentError)
+    expect { p.parse(120.23) }.to raise_error(ArgumentError)
+    expect { p.parse([])     }.to raise_error(ArgumentError)
+  end
+  
 end

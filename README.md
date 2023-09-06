@@ -40,6 +40,16 @@ file name :
 	
 	bundle exec rspec -I src/ tests/argument.rspec:38 	
 
+### Troubleshooting
+
+If you have **LoadError** failure when running individual unit tests such as
+
+	LoadError:
+      cannot load such file -- <A random src/ filename>
+
+you may have forgotten to add `-I src/`. Also make sure to call `rspec`
+the `bundle exec` way.
+
 ## API documentation
 
 To generate or update *API documentation*, plus run `yard` then open

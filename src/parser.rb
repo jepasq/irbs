@@ -17,6 +17,10 @@ class Parser
   #
   # @return The parsed text.
   def parse(txt)
+    unless txt.is_a?(String)
+      raise ArgumentError.new("Argument should be a string")
+    end
+    
     return txt
   end               
 end
