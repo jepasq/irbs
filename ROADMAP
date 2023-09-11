@@ -73,6 +73,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   Unit tests may be based on this examples and the main script return value
 **** TODO Start to implement Parser class
 :LOGBOOK:
+CLOCK: [2023-09-11 lun. 06:23]--[2023-09-11 lun. 06:42] =>  0:19
 CLOCK: [2023-09-11 lun. 05:38]--[2023-09-11 lun. 05:41] =>  0:03
 CLOCK: [2023-09-06 mer. 07:48]--[2023-09-06 mer. 08:07] =>  0:19
 :END:
@@ -80,6 +81,9 @@ CLOCK: [2023-09-06 mer. 07:48]--[2023-09-06 mer. 08:07] =>  0:19
   - [ ] Add handle for Class name  ==[A-Z][a-z0-9A-Z]*=
     Maybe uses an erb parser here ? Using the ERB class from stdlib ?
     https://ruby-doc.org/stdlib-3.0.3/libdoc/erb/rdoc/ERB.html
+  - [ ] #extract_class returns an array of class name
+    Now we have the issue that parser doesn't know about loadable classes
+    to load them and use to_s
     
 - [ ] Find how to implement all attributes, as a hash for exemple
 

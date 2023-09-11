@@ -20,4 +20,14 @@ describe Parser do
     expect("=aze").to_not match(Parser::REGEX_CLASS)
     expect("=123").to_not match(Parser::REGEX_CLASS)
   end
+
+  it "should have a extract_classes function" do
+    # extract_classes should return an Array containing class names
+    p = Parser.new
+    c = p.extract_classes("=Aze    =Crl     =Ser")
+    expect( c.is_a? Array ).to equal(true)
+    expect( c.size ).to equal(3)
+    expect( c[0] ).to   eq("Aze")
+    
+  end
 end
