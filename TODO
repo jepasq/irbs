@@ -9,6 +9,7 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-8 (04 Sep. 2023 - ???) SLOC ???
-- (4) Parser.parse parameter type check added
+- (5) Add and test Parsee::REGEX_CLASS constant
+- Parser.parse parameter type check added
 - Close an examples-related ROADMAP section
 - Remove ConfigParser#title setter

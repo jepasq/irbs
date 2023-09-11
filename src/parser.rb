@@ -9,7 +9,8 @@
 # - class with attribute set <tt>=ClassName{attr1=12}</tt>
 #
 class Parser
-
+  # The regex that should match the parsable name of a class (i.e. =ClassName)
+  REGEX_CLASS = /=([A-Z][A-Za-z0-9]*)\b/
   # Parse the given text and return it with all code handled
   #
   # @param txt The text to be parser. Generally from a class instance

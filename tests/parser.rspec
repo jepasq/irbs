@@ -14,5 +14,10 @@ describe Parser do
     expect { p.parse(120.23) }.to raise_error(ArgumentError)
     expect { p.parse([])     }.to raise_error(ArgumentError)
   end
-  
+
+  it "should have a REGEX_CLASS member that match Classes names" do
+    expect("=Aze").to     match(Parser::REGEX_CLASS)
+    expect("=aze").to_not match(Parser::REGEX_CLASS)
+    expect("=123").to_not match(Parser::REGEX_CLASS)
+  end
 end
