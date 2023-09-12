@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-8 (04 Sep. 2023 - ???) SLOC ???
-- (7) Add parser's fixtures directory structure
+- (8) Parser ctor takes a directory argument
+- Add parser's fixtures directory structure
 - Parser::extract_classes test and implementation
 - Add and test Parser::REGEX_CLASS constant
 - Parser.parse parameter type check added

@@ -3,6 +3,18 @@
 require 'parser'
 
 describe Parser do
+  it "ctor takes a directory argument" do
+    expect { 
+      p = Parser.new "directory_parameter/"
+    }.not_to raise_error(ArgumentError)
+  end
+
+  it "has a directory reader" do
+    dir = "directory_parameter/"
+    p = Parser.new(dir)
+    expect( p.directory ).to eq(dir)
+  end
+  
   it "has a parse function" do
     p = Parser.new
     expect(p.parse("String")).to be_a String
@@ -28,6 +40,5 @@ describe Parser do
     expect( c.is_a? Array ).to equal(true)
     expect( c.size ).to equal(3)
     expect( c[0] ).to   eq("Aze")
-    
   end
 end

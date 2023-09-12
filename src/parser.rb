@@ -9,9 +9,19 @@
 # - class with attribute set <tt>=ClassName{attr1=12}</tt>
 #
 class Parser
+  attr_accessor :directory
+  
   # The regex that should match the parsable name of a class (i.e. =ClassName)
   REGEX_CLASS = /=([A-Z][A-Za-z0-9]*)\b/
 
+  # The constructor that takes a directory parameter
+  #
+  # @param dir The directory where we will search for classes implementation.
+  #            It can be nil and will not be checked for existance.
+  def initialize(dir = nil)
+    @directory = dir
+  end
+  
   # Extract classnames from the given string and return than in an array
   def extract_classes(txt)
     txt.scan(REGEX_CLASS).flatten
