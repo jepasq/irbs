@@ -73,6 +73,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   Unit tests may be based on this examples and the main script return value
 **** TODO Start to implement Parser class
 :LOGBOOK:
+CLOCK: [2023-09-13 mer. 11:32]--[2023-09-13 mer. 11:43] =>  0:11
 CLOCK: [2023-09-13 mer. 11:11]--[2023-09-13 mer. 11:16] =>  0:05
 CLOCK: [2023-09-12 mar. 07:36]--[2023-09-12 mar. 07:58] =>  0:22
 CLOCK: [2023-09-12 mar. 06:56]--[2023-09-12 mar. 07:11] =>  0:15
@@ -81,18 +82,18 @@ CLOCK: [2023-09-11 lun. 05:38]--[2023-09-11 lun. 05:41] =>  0:03
 CLOCK: [2023-09-06 mer. 07:48]--[2023-09-06 mer. 08:07] =>  0:19
 :END:
 - [-] Add a Parser class used to parse the to_s returned string
-  - [ ] Add handle for Class name  ==[A-Z][a-z0-9A-Z]*=
-    Maybe uses an erb parser here ? Using the ERB class from stdlib ?
-    https://ruby-doc.org/stdlib-3.0.3/libdoc/erb/rdoc/ERB.html
   - [X] #extract_class returns an array of class name
     Now we have the issue that parser doesn't know about loadable classes
     to load them and use to_s
   - [X] Maybe pass the directory as parameter of Parser's ctor or #parse
-  - [ ] Then a fixtures/parser/00{x_description} directory containing testable
+  - [X] Then a fixtures/parser/00{x_description} directory containing testable
     situations
-  - [ ] Finally, a parser#handle_classes methode that takes the array from
+  - [X] Finally, a parser#handle_classes methode that takes the array from
     extract_classes and for each found class, instanciate it and replace
     its representation in the string
+  - [ ] Add handle for Class name  ==[A-Z][a-z0-9A-Z]*=
+    Maybe uses an erb parser here ? Using the ERB class from stdlib ?
+    https://ruby-doc.org/stdlib-3.0.3/libdoc/erb/rdoc/ERB.html
     
 - [ ] Find how to implement all attributes, as a hash for exemple
 

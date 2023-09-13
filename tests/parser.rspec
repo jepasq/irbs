@@ -28,12 +28,14 @@ describe Parser do
   end
 
   it "should handle 001_class representation" do
-    p = Parser.new("fixtures/parser/001_class")
-    expect { p.handle_classes("=Sidebar") }.to eq("Sid3b4r")
+    p = Parser.new("../fixtures/parser/001_class")
+    expect(p.handle_classes("=Sidebar")).to eq("S1d3b4r") # Simplest replace
+    # Must keep oter letter (here, a space)
+    expect(p.handle_classes("=Sidebar =Sidebar")).to eq("S1d3b4r S1d3b4r")
 
     # Doesn't expand
-    expect { p.handle_classes("=sidebar") }.to eq("=sidebar")
-    expect { p.handle_classes("Sidebar")  }.to eq("=sidebar")
+    expect(p.handle_classes("=sidebar")).to eq("=sidebar")
+    expect(p.handle_classes("Sidebar")).to eq("Sidebar")
   end
   
   it "should have a REGEX_CLASS member that match Classes names" do

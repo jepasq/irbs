@@ -27,6 +27,19 @@ class Parser
     txt.scan(REGEX_CLASS).flatten
   end
 
+  # Extract then replace the text by the classes representation
+  def handle_classes(txt)
+    ret = txt
+    extract_classes(txt).each do |c|
+      # Instanciates the class, get its representation and replace string
+      classfile = File.join(@directory, c + '.rb')
+      require_relative classfile
+      instance = Kernel.const_get(c).new
+      ret.gsub!( '=' + c, instance.to_s)
+    end
+    ret
+  end
+  
   # Parse the given text and return it with all code handled
   #
   # @param txt The text to be parser. Generally from a class instance
@@ -38,6 +51,6 @@ class Parser
       raise ArgumentError.new("Argument should be a string")
     end
     
-    return txt
+    return handle_classes(txt)
   end               
 end
