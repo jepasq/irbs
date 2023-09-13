@@ -27,6 +27,15 @@ describe Parser do
     expect { p.parse([])     }.to raise_error(ArgumentError)
   end
 
+  it "should handle 001_class representation" do
+    p = Parser.new("fixtures/parser/001_class")
+    expect { p.handle_classes("=Sidebar") }.to eq("Sid3b4r")
+
+    # Doesn't expand
+    expect { p.handle_classes("=sidebar") }.to eq("=sidebar")
+    expect { p.handle_classes("Sidebar")  }.to eq("=sidebar")
+  end
+  
   it "should have a REGEX_CLASS member that match Classes names" do
     expect("=Aze").to     match(Parser::REGEX_CLASS)
     expect("=aze").to_not match(Parser::REGEX_CLASS)
