@@ -20,14 +20,13 @@ class Argument
 
   # Raise an error if unknown argument is passed
   def raise_if_unknown_arg(argv)
-    # Remove all to-be-handled arguments from a copied array
     ttt= argv.dup
-
     ## but before, remove all non-arguments ones
     ttt = ttt.select{|e| e.start_with? '-'}
+    # Remove all to-be-handled arguments from a copied array
     ttt.delete_if do |elem|
-      argv.any? do |e2|
-        elem.include?( e2)
+      @opts.any? do |e2|
+        e2.aliases.include?(elem)
       end
     end
     

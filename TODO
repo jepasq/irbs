@@ -9,5 +9,6 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-9 (12 Sep. 2023 - ???) SLOC ???
-- (2) Implement Parser#handle_classes function to fix unit tests
+- (3) Fix the Argument#raise_if_unknown_arg nor raising error
+- Implement Parser#handle_classes function to fix unit tests
 - Add first parser fixture and test implementation
