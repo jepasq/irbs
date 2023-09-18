@@ -51,6 +51,10 @@ class ArgumentOption
     ret
   end
 
+  def first_column
+    aliases.join(', ')
+  end
+  
   # Handle text representation here
   def to_s
     aliases[0]

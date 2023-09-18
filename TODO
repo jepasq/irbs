@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-9 (12 Sep. 2023 - ???) SLOC ???
-- (5) Add a column_width argument to ArgumentOption#full_text function
+- (6) Better usage text column-based output
+- Add a column_width argument to ArgumentOption#full_text function
 - Fix the last failing main rspec
 - Fix the Argument#raise_if_unknown_arg nor raising error
 - Implement Parser#handle_classes function to fix unit tests

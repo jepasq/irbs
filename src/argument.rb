@@ -62,9 +62,20 @@ class Argument
       puts "An Inspection/Representation Based web Server."
       
       puts "\nOptions :"
-      puts "  --help, -h, -?   Print this usage text and exit with 0 status."
+
+      # First, compute first column max width
+      widths = Array.new
       @opts.each do |a|
-        puts "  #{a.full_text}"
+        widths << a.first_column.length
+      end
+      w = widths.max
+
+      # Special case, the help option
+      print "  " + "--help, -h, -?".ljust(w+1, ' ')
+      puts "Print this usage text and exit with 0 status."
+      
+      @opts.each do |a|
+        puts "  #{a.full_text(w)}"
       end
       exit(0)
     end
