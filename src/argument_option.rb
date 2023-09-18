@@ -42,10 +42,12 @@ class ArgumentOption
   
   # Return all aliases and help text in a single string
   #
-  # It is used to be print ed in terminal during usage message.
-  def full_text
-    ret  = sprintf "%10s", aliases.join(', ')
-    ret += @help
+  # It is used to be print it in terminal during usage message.
+  #
+  # @param column_width First column width to be padded with.
+  def full_text(column_width = 2)
+    ret  = aliases.join(', ').ljust(column_width, ' ')
+    ret += ' ' + @help
     ret
   end
 

@@ -1,3 +1,5 @@
+#                                          -*-ruby-*-
+
 require 'argument_option'
 
 describe ArgumentOption do
@@ -20,5 +22,12 @@ describe ArgumentOption do
     expect( arg1.fire_if('-a') ).to be false
     expect( arg1.fire_if('-h') ).to be true
     expect( arg1.fire_if('--help') ).to be true
+  end
+
+  it "full_text can take a first_column argument" do
+    arg1=ArgumentOption.new('-a', 'aaa'){ "aze" }
+    expect( arg1.full_text ).to eq "-a aaa"
+
+    expect( arg1.full_text(20) ).to eq "-a                   aaa"
   end
 end
