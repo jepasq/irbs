@@ -73,6 +73,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   Unit tests may be based on this examples and the main script return value
 **** TODO Start to implement Parser class
 :LOGBOOK:
+CLOCK: [2023-09-18 lun. 09:27]--[2023-09-18 lun. 09:44] =>  0:17
 CLOCK: [2023-09-14 jeu. 09:44]--[2023-09-14 jeu. 10:23] =>  0:39
 CLOCK: [2023-09-13 mer. 11:32]--[2023-09-13 mer. 11:43] =>  0:11
 CLOCK: [2023-09-13 mer. 11:11]--[2023-09-13 mer. 11:16] =>  0:05
@@ -94,13 +95,15 @@ CLOCK: [2023-09-06 mer. 07:48]--[2023-09-06 mer. 08:07] =>  0:19
     its representation in the string
 - [X] Trying to fix *tests/argument.rspec:38* failing unit test
   =bundle exec rspec -I src/ ./tests/argument.rspec:38=
-
-- [ ] Add handle for Class name  ==[A-Z][a-z0-9A-Z]*=
+- [X] Add handle for Class name  ==[A-Z][a-z0-9A-Z]*=
   Maybe uses an erb parser here ? Using the ERB class from stdlib ?
   https://ruby-doc.org/stdlib-3.0.3/libdoc/erb/rdoc/ERB.html
   - Add it before or after extracting classes ?
     Before I think, so we can generate and dynaimcally create =Classname 
     
+- [ ] Help command should use column or fixed width
+  There's no space between options and their descriptions
+
 - [ ] Find how to implement all attributes, as a hash for exemple
 
 - [ ] We have an =raise_if_unknown_arg= error when running irbs manually

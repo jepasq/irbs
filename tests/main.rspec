@@ -33,7 +33,7 @@ describe MainScript do
     output = `#{script} examples/thisDirectoryWontExistEvenInSeveralYears 2>&1`
     expect($?.success?).to be false
 
-    output = `#{script} --no-interective examples/test01 2>&1`
+    output = `#{script} --non-interactive examples/001_app 2>&1`
     expect($?.success?).to be true
   end
 
