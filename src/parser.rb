@@ -32,7 +32,7 @@ class Parser
     ret = txt
     extract_classes(txt).each do |c|
       # Instanciates the class, get its representation and replace string
-      classfile = File.join(@directory, c + '.rb')
+      classfile = File.join(@directory, c.downcase + '.rb')
       require_relative classfile
       instance = Kernel.const_get(c).new
       ret.gsub!( '=' + c, instance.to_s)

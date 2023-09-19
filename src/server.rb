@@ -1,5 +1,6 @@
 require_relative 'config_parser.rb'
 require_relative 'favicon'
+require_relative 'parser'
 
 require 'socket'
 
@@ -62,7 +63,11 @@ class Server
     # see https://stackoverflow.com/a/5924555
     instance = Kernel.const_get(classn).new
     pii "Instancing '#{classn}' from '#{classfile}'"
-    instance.to_s
+
+    # Parse and print
+    pa = Parser.new @directory
+    
+    pa.parse instance.to_s
   end
 
   # Return a string representation of the @interactive field

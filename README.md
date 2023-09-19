@@ -40,7 +40,15 @@ file name :
 	
 	bundle exec rspec -I src/ tests/argument.rspec:38 	
 
-### Troubleshooting
+## Naming conventions
+
+### Class name
+
+While the parser search for *Camelcase* class names (i.e. `Sidebar`), the
+ruby name convention makes this class reside in a file named `sidebar.rb`
+(note the down case first char). The parser follow this convention.
+
+## Troubleshooting
 
 If you have **LoadError** failure when running individual unit tests such as
 

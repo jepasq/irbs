@@ -29,27 +29,6 @@ And test for HEREDOC or %q() see https://medium.com/modern-learner/multiline-str
 - [ ] If #{varname} found, print this field value. Normal way for ruby.
   Does it work for functions ?
 - [ ] if #funcname found, run this function from 
-**** Handle Unit tests and API documentation
-:LOGBOOK:
-CLOCK: [2023-09-01 ven. 07:56]--[2023-09-01 ven. 08:07] =>  0:11
-CLOCK: [2023-08-24 jeu. 04:19]--[2023-08-24 jeu. 04:30] =>  0:11
-CLOCK: [2023-08-23 mer. 05:23]--[2023-08-23 mer. 05:36] =>  0:13
-CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
-:END:
-- [ ] The non-interactive option must work
-  - [ ] Must fix the Argument#consume unit test
-- [ ] Maybe based on RSpec
-  - [ ] Main script can be found, is executable and return an error status code
-    when called on an inexisting dir
-- [ ] From test/ directory. Add a Makefile rule for that
-
-- [ ] Testing API doc generation with yard
-  =yard stats --list-undoc= for undocumented members
-  =yard doc src=
-  =open doc/index.html=
-  or
-  =yard server --reload=
-  
 **** TODO Open a web server based on a DSL-based ruby configuration file (2)
 :LOGBOOK:
 CLOCK: [2023-08-29 mar. 07:00]--[2023-08-29 mar. 07:13] =>  0:13
@@ -84,6 +63,32 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   - [ ] Add a unit test for the created <link> markup  
 - [ ] How to handle endpoint argument : now test it
 - [ ] Add rspec for example_001
+**** TODO Handle Unit tests and API documentation
+:LOGBOOK:
+CLOCK: [2023-09-19 mar. 11:42]--[2023-09-19 mar. 11:57] =>  0:15
+CLOCK: [2023-09-01 ven. 07:56]--[2023-09-01 ven. 08:07] =>  0:11
+CLOCK: [2023-08-24 jeu. 04:19]--[2023-08-24 jeu. 04:30] =>  0:11
+CLOCK: [2023-08-23 mer. 05:23]--[2023-08-23 mer. 05:36] =>  0:13
+CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
+:END:
+- [X] The non-interactive option must work
+  - [X] Must fix the Argument#consume unit test
+- [X] Maybe based on RSpec
+  - [X] Main script can be found, is executable and return an error status code
+    when called on an inexisting dir
+- [X] From test/ directory. Add a Makefile rule for that
+- [X] examples/002_nested.rspec
+  It doesn't show Sidebar class representation
+
+- [ ] ./tests/examples/003_title.rspec:17
+
+- [ ] Testing API doc generation with yard
+  =yard stats --list-undoc= for undocumented members
+  =yard doc src=
+  =open doc/index.html=
+  or
+  =yard server --reload=
+  
 **** DONE Start to implement Parser class
 :LOGBOOK:
 CLOCK: [2023-09-18 lun. 10:09]--[2023-09-18 lun. 10:30] =>  0:21

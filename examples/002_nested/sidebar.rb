@@ -2,6 +2,6 @@
 class Sidebar
   # This 
   def to_s
-    "Sideb4r content"
+    "sideb4r content"
   end
 end
