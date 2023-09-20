@@ -1,3 +1,13 @@
+* v0.0.0-9 (12 Sep. 2023 - 20 Sep. 2023) SLOC 445
+- Add sidebar class to 003 example
+- Fix the Sidebar class name unit test
+- Better usage text column-based output
+- Add a column_width argument to ArgumentOption#full_text function
+- Fix the last failing main rspec
+- Fix the Argument#raise_if_unknown_arg nor raising error
+- Implement Parser#handle_classes function to fix unit tests
+- Add first parser fixture and test implementation
+
 * v0.0.0-8 (04 Sep. 2023 - 12 Sep. 2023) SLOC 411
 - Parser ctor takes a directory argument
 - Add parser's fixtures directory structure
