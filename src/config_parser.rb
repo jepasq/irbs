@@ -48,6 +48,9 @@ class ConfigParser
     @routes[key] = value
   end
 
+  # Return the HTML title markup if not nil
+  #
+  # @return The title markup and its content from the title instance variable.
   def title_content
     "<title>#{@title}</title>" if title
   end
