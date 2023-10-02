@@ -67,6 +67,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
 - [ ] Add rspec for example_001
 **** TODO [fix_TitleSetter] Handle Unit tests and API documentation
 :LOGBOOK:
+CLOCK: [2023-10-02 lun. 11:13]--[2023-10-02 lun. 11:37] =>  0:24
 CLOCK: [2023-09-21 jeu. 09:50]--[2023-09-21 jeu. 10:39] =>  0:49
 CLOCK: [2023-09-19 mar. 11:42]--[2023-09-19 mar. 11:57] =>  0:15
 CLOCK: [2023-09-01 ven. 07:56]--[2023-09-01 ven. 08:07] =>  0:11
@@ -84,7 +85,7 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
   It doesn't show Sidebar class representation
 
 - [ ] ./tests/examples/003_title.rspec:17
-  Working on it in a dedecated fix branch
+  Working on it in a dedicated fix branch
   
 - [ ] Testing API doc generation with yard
   =yard stats --list-undoc= for undocumented members

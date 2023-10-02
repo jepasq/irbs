@@ -11,7 +11,19 @@ describe "Example_003Title" do
   it "must have a nil title" do
     cp = ConfigParser.new
     expect(cp.title).to be nil
-    
+  end
+
+  it "must be able to set ConfigParser#title" do
+    cp = ConfigParser.new
+    cp.title="AAA"
+    expect(cp.title).to eq "AAA"
+  end
+
+  it "must test for ConfigParser#title_content" do
+    cp = ConfigParser.new
+    expect(cp.title_content).to be nil
+    cp.title="AAA"
+    expect(cp.title_content).to eq "<title>AAA</title>"
   end
   
   it "must contain title and pag€ texts" do
