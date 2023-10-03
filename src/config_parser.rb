@@ -14,7 +14,7 @@ class ConfigParser
   attr_accessor :routes
 
   # The current page title you can set with the title= function in the
-  # SDL script
+  # DSL script. nil by default.
   attr_accessor :title
   
   # The default calues for server configuration
@@ -52,7 +52,7 @@ class ConfigParser
   #
   # @return The title markup and its content from the title instance variable.
   def title_content
-    "<title>#{@title}</title>" if title
+    "<title>#{@title}</title>" if @title
   end
   
 end

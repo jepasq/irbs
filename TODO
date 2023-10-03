@@ -9,4 +9,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-10 (20 Sep. 2023 - ???) SLOC ???
-- (1) Add some ConfigParser title tests
+- (2) Fix wrong title test in config_parser
+- Add some ConfigParser title tests
