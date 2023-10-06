@@ -4,7 +4,7 @@
 # irgs server.
 class ConfigParser
   # The port the server will listen to new connection on
-  attr_accessor :port
+  attr_reader :port
   
   # A hash of key/value serving as routes
   #
@@ -15,7 +15,7 @@ class ConfigParser
 
   # The current page title you can set with the title= function in the
   # DSL script. nil by default.
-  attr_accessor :title
+  attr_reader :title
   
   # The default calues for server configuration
   def initialize
@@ -53,6 +53,14 @@ class ConfigParser
   # @return The title markup and its content from the title instance variable.
   def title_content
     "<title>#{@title}</title>" if @title
+  end
+
+  def port(p)
+    @port = p
+  end
+
+  def title(t)
+    @title = t
   end
   
 end

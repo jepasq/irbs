@@ -99,7 +99,7 @@ class Server
       content = File.read(script)
       parser.instance_eval(content)
     rescue => e
-      puts "Failed to open parse #{script} : #{e}"
+      puts "Failed to parse #{script} : #{e}"
       exit(1)
     end
 
