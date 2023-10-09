@@ -14,7 +14,7 @@ end
 
 describe MainScript do
   it "exists" do
-    expect(File.exists?(script)).to be true
+    expect(File.exist?(script)).to be true
   end
   
   it "is executable" do

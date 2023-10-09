@@ -85,8 +85,7 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
 - [X] From test/ directory. Add a Makefile rule for that
 - [X] examples/002_nested.rspec
   It doesn't show Sidebar class representation
-
-- [ ] ./tests/examples/003_title.rspec:17
+- [X] ./tests/examples/003_title.rspec:17
   Working on it in a dedicated fix branch
   Even if title= is misspelled, we have no error
   see back https://www.paweldabrowski.com/articles/building-dsl-with-ruby
