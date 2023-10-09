@@ -10,19 +10,19 @@ describe "Example_003Title" do
   # A frshly created ConfigParser class must have a nil title
   it "must have a nil title" do
     cp = ConfigParser.new
-    expect(cp.title).to be nil
+    expect(cp.get_title).to be nil
   end
 
   it "must be able to set ConfigParser#title" do
     cp = ConfigParser.new
-    cp.title="AAA"
-    expect(cp.title).to eq "AAA"
+    cp.title "AAA"
+    expect(cp.get_title).to eq "AAA"
   end
 
   it "must test for ConfigParser#title_content" do
     cp = ConfigParser.new
     expect(cp.title_content).to be nil
-    cp.title="AAA"
+    cp.title "AAA"
     expect(cp.title_content).to eq "<title>AAA</title>"
   end
   
@@ -30,6 +30,6 @@ describe "Example_003Title" do
     output = `#{script} --non-interactive examples/003_title 2>&1`
     expect(output).to include("<title>")
     expect(output).to include("</title>")
-    expect(output).to include("pag€")
+    expect(output).to include("Pag€")
   end
 end

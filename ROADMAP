@@ -64,8 +64,9 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   - [ ] Add a unit test for the created <link> markup  
 - [ ] How to handle endpoint argument : now test it
 - [ ] Add rspec for example_001
-**** TODO [fix_TitleSetter] Handle Unit tests and API documentation
+**** TODO Handle Unit tests and API documentation
 :LOGBOOK:
+CLOCK: [2023-10-09 lun. 02:42]--[2023-10-09 lun. 02:48] =>  0:06
 CLOCK: [2023-10-06 ven. 06:26]--[2023-10-06 ven. 06:58] =>  0:32
 CLOCK: [2023-10-03 mar. 06:24]--[2023-10-03 mar. 06:48] =>  0:24
 CLOCK: [2023-10-02 lun. 11:13]--[2023-10-02 lun. 11:37] =>  0:24
