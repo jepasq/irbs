@@ -23,7 +23,7 @@ class ConfigParser
   # Change the favicon
   #
   # @param p The new favicon filename
-  def favicon=(p)
+  def favicon (p)
     @routes['/favicon.ico'] = p
   end
 
