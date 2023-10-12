@@ -1,3 +1,5 @@
+require 'mime/types'
+
 # A favicon (favorite icon) if a graphic files associated by a browser
 # with a particular website or webpage
 class Favicon
