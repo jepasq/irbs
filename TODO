@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-10 (20 Sep. 2023 - ???) SLOC ???
-- (6) Add a new favicon example/unit tests tuple
+- (7) Fix require issue with mime/type in example 004 ia bundler
+- Add a new favicon example/unit tests tuple
 - Avoid usage of deprecated File#exists function in main script UT
 - Finally fix title-based ConfigParser unit tests
 - Close to fix ConfigParser title DSL affectation issue

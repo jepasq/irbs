@@ -16,6 +16,12 @@ If you need to set a local path because of permissions error :
 
 	bundle config set --local path vendor/bundle
 
+## Running
+
+To avoid require issue and run the main script with *bundler* context :
+
+	bundle exec src/irbs
+
 ## Instalation
 
 A *Makefile* provides a rule to link in-source binary to `/usr/local/bin`. To
