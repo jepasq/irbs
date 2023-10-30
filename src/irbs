@@ -3,6 +3,14 @@
 VERSION="0.0.0"
 REVISION=9
 
+# Check if we are running from the bundler environment. If you call this script
+# directly (without bundler), you may have require error (especially with the
+# 'mime-types' gem). As this require error can occur from any ''require'
+# statement, it must be placed before any.
+if not defined?(Bundler) then
+  raise "This script shoudn't be ran directly. Please run it via Bundler!"
+end
+
 # Argument handling
 require_relative 'argument'
 require_relative 'server'

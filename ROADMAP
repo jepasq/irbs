@@ -49,31 +49,8 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   https://www.rubyguides.com/2016/08/build-your-own-web-server/
 - [ ] First tests go in examples/{name}/ directory
   Unit tests may be based on this examples and the main script return value
-**** TODO [feature_Favicon] Continue Parser class implementation
-:LOGBOOK:
-CLOCK: [2023-10-18 mer. 04:09]--[2023-10-18 mer. 04:18] =>  0:09
-CLOCK: [2023-10-12 jeu. 05:02]--[2023-10-12 jeu. 05:08] =>  0:06
-CLOCK: [2023-10-12 jeu. 03:38]--[2023-10-12 jeu. 04:05] =>  0:27
-:END:
-- [-] May define favicon with DSL
-  Add =<link rel="icon" type="image/vnd.icon" href="checmin.ico">=
-  type can be image/png or image/gif according to the extension
-  - [X] Check if the file can be found
-  - [ ] Add a unit test for the created <link> markup  
-    We are currently unable to require the mime/types gem
-
-- [ ] src/irbs must be ran through bundler : check that
-  https://stackoverflow.com/a/31359866
-  
-
-- [ ] Find how to implement Class with all attributes, as a hash for exemple
-
-- [ ] It's not clear why the 003 example, for example, as a main class file
-  named 'Application' where all other files will be named in snake case ?
-- [ ] We have an =raise_if_unknown_arg= error when running irbs manually
-  with the list of implemented options, maybe an array error
-- [ ] How to handle endpoint argument : now test it
-- [ ] Add rspec for example_001
+**** Occasionally call =bundle update=
+- Last call (date and updates)
 **** TODO Handle Unit tests and API documentation
 :LOGBOOK:
 CLOCK: [2023-10-09 lun. 02:42]--[2023-10-09 lun. 02:48] =>  0:06
@@ -107,7 +84,34 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
   =open doc/index.html=
   or
   =yard server --reload=
+**** TODO [feature_Favicon] Continue Parser class implementation
+:LOGBOOK:
+CLOCK: [2023-10-30 lun. 05:13]--[2023-10-30 lun. 05:22] =>  0:09
+CLOCK: [2023-10-18 mer. 04:09]--[2023-10-18 mer. 04:18] =>  0:09
+CLOCK: [2023-10-12 jeu. 05:02]--[2023-10-12 jeu. 05:08] =>  0:06
+CLOCK: [2023-10-12 jeu. 03:38]--[2023-10-12 jeu. 04:05] =>  0:27
+:END:
+- [X] src/irbs must be ran through bundler : check that
+  https://stackoverflow.com/a/31359866
+
+- [-] May define favicon with DSL
+  Add =<link rel="icon" type="image/vnd.icon" href="checmin.ico">=
+  type can be image/png or image/gif according to the extension
+  - [X] Check if the file can be found
+  - [ ] Add a unit test for the created <link> markup  
+    We are currently unable to require the mime/types gem
   
+- [ ] Maybe we need a Section class (to be used as header)
+  With a tagname and a list of subitems
+
+- [ ] Find how to implement Class with all attributes, as a hash for exemple
+
+- [ ] It's not clear why the 003 example, for example, as a main class file
+  named 'Application' where all other files will be named in snake case ?
+- [ ] We have an =raise_if_unknown_arg= error when running irbs manually
+  with the list of implemented options, maybe an array error
+- [ ] How to handle endpoint argument : now test it
+- [ ] Add rspec for example_001
 **** DONE Start to implement Parser class
 :LOGBOOK:
 CLOCK: [2023-09-18 lun. 10:09]--[2023-09-18 lun. 10:30] =>  0:21

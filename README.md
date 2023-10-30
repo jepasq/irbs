@@ -22,6 +22,12 @@ To avoid require issue and run the main script with *bundler* context :
 
 	bundle exec src/irbs
 
+or simply 
+
+	make run
+
+You can pass parameters after make run.
+
 ## Instalation
 
 A *Makefile* provides a rule to link in-source binary to `/usr/local/bin`. To
