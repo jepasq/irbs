@@ -1,3 +1,13 @@
+* v0.0.0-10 (20 Sep. 2023 - 30 Oct. 2023) SLOC 460
+- Add a test to make sure main script is ran through bundler
+- Fix require issue with mime/type in example 004 via bundler
+- Add a new favicon example/unit tests tuple
+- Avoid usage of deprecated File#exists function in main script UT
+- Finally fix title-based ConfigParser unit tests
+- Close to fix ConfigParser title DSL affectation issue
+- Fix wrong title test in config_parser
+- Add some ConfigParser title tests
+
 * v0.0.0-9 (12 Sep. 2023 - 20 Sep. 2023) SLOC 445
 - Add sidebar class to 003 example
 - Fix the Sidebar class name unit test
