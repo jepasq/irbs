@@ -86,6 +86,7 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
   =yard server --reload=
 **** TODO [feature_Favicon] Continue Parser class implementation
 :LOGBOOK:
+CLOCK: [2023-11-07 mar. 02:44]--[2023-11-07 mar. 03:05] =>  0:21
 CLOCK: [2023-10-30 lun. 05:13]--[2023-10-30 lun. 05:22] =>  0:09
 CLOCK: [2023-10-18 mer. 04:09]--[2023-10-18 mer. 04:18] =>  0:09
 CLOCK: [2023-10-12 jeu. 05:02]--[2023-10-12 jeu. 05:08] =>  0:06
@@ -93,6 +94,10 @@ CLOCK: [2023-10-12 jeu. 03:38]--[2023-10-12 jeu. 04:05] =>  0:27
 :END:
 - [X] src/irbs must be ran through bundler : check that
   https://stackoverflow.com/a/31359866
+
+- [ ] =WARNING: Using `expect { }.not_to raise_error(SpecificErrorClass)= ...
+  nstead consider using `expect { }.not_to raise_error` or `expect { }.to
+  raise_error(DifferentSpecificErrorClass)`
 
 - [-] May define favicon with DSL
   Add =<link rel="icon" type="image/vnd.icon" href="checmin.ico">=
@@ -103,6 +108,7 @@ CLOCK: [2023-10-12 jeu. 03:38]--[2023-10-12 jeu. 04:05] =>  0:27
   
 - [ ] Maybe we need a Section class (to be used as header)
   With a tagname and a list of subitems
+  - As a subclass of array ?
 
 - [ ] Find how to implement Class with all attributes, as a hash for exemple
 
