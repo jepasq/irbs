@@ -28,7 +28,7 @@ or simply
 
 You can pass parameters after make run.
 
-## Instalation
+## Installation
 
 A *Makefile* provides a rule to link in-source binary to `/usr/local/bin`. To
 use it, try :
