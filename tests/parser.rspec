@@ -6,7 +6,7 @@ describe Parser do
   it "ctor takes a directory argument" do
     expect { 
       p = Parser.new "directory_parameter/"
-    }.to not_raise_error   # Could be ArgumentError
+    }.to_not raise_error   # Could be ArgumentError
   end
 
   it "has a directory reader" do
