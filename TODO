@@ -9,6 +9,7 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-11 (30 Oct. 2023 - ???) SLOC ???
-- (2) Fix a not_raise_error-related error in parser tests
+- (3) Add Group class and associated tests
+- Fix a not_raise_error-related error in parser tests
 - Fix a not_to raise_error warning in parser.rspec:7
 

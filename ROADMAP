@@ -86,6 +86,7 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
   =yard server --reload=
 **** TODO [feature_Favicon] Continue Parser class implementation
 :LOGBOOK:
+CLOCK: [2023-11-30 jeu. 05:50]--[2023-11-30 jeu. 06:50] =>  1:00
 CLOCK: [2023-11-22 mer. 02:45]--[2023-11-22 mer. 02:54] =>  0:09
 CLOCK: [2023-11-07 mar. 02:44]--[2023-11-07 mar. 03:05] =>  0:21
 CLOCK: [2023-10-30 lun. 05:13]--[2023-10-30 lun. 05:22] =>  0:09
@@ -95,21 +96,19 @@ CLOCK: [2023-10-12 jeu. 03:38]--[2023-10-12 jeu. 04:05] =>  0:27
 :END:
 - [X] src/irbs must be ran through bundler : check that
   https://stackoverflow.com/a/31359866
-
-- [ ] =WARNING: Using `expect { }.not_to raise_error(SpecificErrorClass)= ...
+- [X] =WARNING: Using `expect { }.not_to raise_error(SpecificErrorClass)= ...
   nstead consider using `expect { }.not_to raise_error` or `expect { }.to
   raise_error(DifferentSpecificErrorClass)`
-
-- [-] May define favicon with DSL
+- [X] May define favicon with DSL
   Add =<link rel="icon" type="image/vnd.icon" href="checmin.ico">=
   type can be image/png or image/gif according to the extension
   - [X] Check if the file can be found
-  - [ ] Add a unit test for the created <link> markup  
-    We are currently unable to require the mime/types gem
-  
-- [ ] Maybe we need a Section class (to be used as header)
+  - [X] Add a unit test for the created <link> markup  
+- [X] Maybe we need a Group class (to be used as header)
   With a tagname and a list of subitems
   - As a subclass of array ?
+
+- [ ] Implement header Group to add favicon text
 
 - [ ] Find how to implement Class with all attributes, as a hash for exemple
 

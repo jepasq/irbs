@@ -1,0 +1,33 @@
+#                                          -*-ruby-*-
+
+require 'group'
+
+describe Group do
+  it "can be instantiated with a name parameter" do
+    f = Group.new('section')
+    expect(f.nil?).to be false    
+  end
+
+  it "has a add function" do
+    f = Group.new('section')
+    f.add("I'm a child HTLM element")
+    #expect(f.nil?).to be false    
+  end
+
+  it "has a to_str function that contains group name and str content" do
+    f = Group.new('section')
+    f.add("I'm a child HTML element")
+    out = f.to_str
+    expect(out).to include("<section>")    # Group opening tag
+    expect(out).to include("</section>")   # Group edning tag
+    expect(out).to include("child HTML")   # Added arbitrary string
+  end
+
+  it "Can't add anything but a string" do
+    f = Group.new('section')
+     # Not a string
+    expect { f.add(127) }.to raise_error(ArgumentError)
+  end
+
+  
+end

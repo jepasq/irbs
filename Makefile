@@ -11,3 +11,7 @@ check:
 install:
 	mkdir -p $(BIN)
 	$(LNS) $(PWD)/src/irbs $(BIN)
+
+# Individual checks
+check-group:
+	bundle exec rspec -I src/ tests/group.rspec
