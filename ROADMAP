@@ -107,6 +107,7 @@ CLOCK: [2023-10-12 jeu. 03:38]--[2023-10-12 jeu. 04:05] =>  0:27
 - [X] Maybe we need a Group class (to be used as header)
   With a tagname and a list of subitems
   - As a subclass of array ?
+- [X] Only print group if children array is non-empty
 
 - [ ] Implement header Group to add favicon text
 

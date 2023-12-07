@@ -29,5 +29,10 @@ describe Group do
     expect { f.add(127) }.to raise_error(ArgumentError)
   end
 
+  it "returns nothing if no children" do
+    f = Group.new('section')
+    out = f.to_str
+    expect(out).to eq ""
+  end
   
 end

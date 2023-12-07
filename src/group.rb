@@ -20,10 +20,14 @@ class Group
   end
 
   def to_str
-    a="<"+@name+">"
-    a+=@items.join
-    a+="</"+@name+">"
-    return a
+    if @items.empty?
+      return ""
+    else
+      a="<"+@name+">"
+      a+=@items.join
+      a+="</"+@name+">"
+      return a
+    end
   end
   
 end
