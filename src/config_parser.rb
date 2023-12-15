@@ -1,7 +1,11 @@
+require_relative 'group'
+
 # A project configuration DSL
 #
 # This parser is used to define keyword that can be used in a DSL to configure
-# irgs server.
+# irbs server.
+#
+# This class also contain the header group that can be used to modify 
 class ConfigParser
   # The port the server will listen to new connection on
   attr_reader :port
@@ -13,11 +17,16 @@ class ConfigParser
   #   :profile: => class defined in Profile.rb 
   attr_accessor :routes
 
+  # A group used to add favicon link and other header section content
+  attr_accessor :header
+
+  
   # The default calues for server configuration
   def initialize
     @port = 8082
     @routes = Hash.new
     @routes['root'] = 'application'
+    @header = Group.new "Header"
   end
 
   # Change the favicon
@@ -25,6 +34,7 @@ class ConfigParser
   # @param p The new favicon filename
   def favicon (p)
     @routes['/favicon.ico'] = p
+    @header.add('<link rel="icon" type="image/x-icon" href="' + p + '">')
   end
 
   # A route block

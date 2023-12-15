@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-11 (30 Oct. 2023 - ???) SLOC ???
-- (4) Group doesn't render if no children
+- (5) Server from main script uses ConfigReader's header group for favicon
+- Group doesn't render if no children
 - Add Group class and associated tests
 - Fix a not_raise_error-related error in parser tests
 - Fix a not_to raise_error warning in parser.rspec:7

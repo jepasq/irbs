@@ -112,6 +112,7 @@ class Server
 
     if not @interactive
       puts parser.title_content
+      puts parser.header.to_str
       puts page_content(:root)
       exit(0) 
     end
@@ -138,8 +139,9 @@ class Server
           slur = path
         end
         puts "#{cl} GET #{path}"
-        text=parser.title_content
-        text=page + page_content(slur)
+        text = parser.title_content
+        text+= parser.header.to_str
+        text+= page + page_content(slur)
         client.puts(success(text))
       end                                                    
       
