@@ -2,7 +2,7 @@
 
 * v1.0.0
 ** v0.1.0
-*** v0.0.1
+*** TODO v0.0.2
 **** Work on the representation parser
 :LOGBOOK:
 CLOCK: [2023-08-18 ven. 03:20]--[2023-08-18 ven. 03:35] =>  0:15
@@ -85,8 +85,24 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
   or
   =yard server --reload=
   - [ ] Can we add a mainpage (to add the header group in config_parser for ex.)
-**** TODO [feature_Favicon] Continue Parser class implementation
+**** TODO Fix ARGV issue in main script
+- [ ] 004_favicon example fails to parse irbs/config.rb
+  =Failed to parse= seems to be from server.rb
+  arg.only_dirs(ARGV) in irbs main script seems to fail
+  - [ ] Check Argument class tests : no, ARGV is already empty here
+  
+- [ ] Find how to implement Class with all attributes, as a hash for exemple
+
+- [ ] It's not clear why the 003 example, for example, as a main class file
+  named 'Application' where all other files will be named in snake case ?
+- [ ] We have an =raise_if_unknown_arg= error when running irbs manually
+  with the list of implemented options, maybe an array error
+- [ ] How to handle endpoint argument : now test it
+- [ ] Add rspec for example_001
+*** DONE v0.0.1
+**** DONE Group class implementation and usage for header/favicon
 :LOGBOOK:
+CLOCK: [2023-12-15 ven. 08:14]--[2023-12-15 ven. 08:43] =>  0:29
 CLOCK: [2023-12-15 ven. 07:10]--[2023-12-15 ven. 07:42] =>  0:32
 CLOCK: [2023-11-30 jeu. 05:50]--[2023-11-30 jeu. 06:50] =>  1:00
 CLOCK: [2023-11-22 mer. 02:45]--[2023-11-22 mer. 02:54] =>  0:09
@@ -112,15 +128,7 @@ CLOCK: [2023-10-12 jeu. 03:38]--[2023-10-12 jeu. 04:05] =>  0:27
 - [X] Only print group if children array is non-empty
 - [X] Implement header Group to add favicon text
   Added in config_reader, to be used globally (on every page of a site)
-  
-- [ ] Find how to implement Class with all attributes, as a hash for exemple
 
-- [ ] It's not clear why the 003 example, for example, as a main class file
-  named 'Application' where all other files will be named in snake case ?
-- [ ] We have an =raise_if_unknown_arg= error when running irbs manually
-  with the list of implemented options, maybe an array error
-- [ ] How to handle endpoint argument : now test it
-- [ ] Add rspec for example_001
 **** DONE Start to implement Parser class
 :LOGBOOK:
 CLOCK: [2023-09-18 lun. 10:09]--[2023-09-18 lun. 10:30] =>  0:21

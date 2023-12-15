@@ -15,3 +15,7 @@ install:
 # Individual checks
 check-group:
 	bundle exec rspec -I src/ tests/group.rspec
+
+check-arg:
+	bundle exec rspec -I src/ tests/argument.rspec
+

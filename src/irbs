@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-VERSION="0.0.0"
+VERSION="0.0.1"
 REVISION=10
 
 # Check if we are running from the bundler environment. If you call this script
@@ -18,7 +18,7 @@ require_relative 'server'
 srv = Server.new
 
 arg=Argument.new
-
+puts ARGV
 
 ni = ArgumentOption.new('--non-interactive',
                           'Print endpoint to console and exit.') do
@@ -47,7 +47,9 @@ arg.add_usage
 arg.consume(ARGV)
 
 # Content/input directory
+p ARGV
 dirs = arg.only_dirs(ARGV)
+p dirs
 dir = dirs[0]
 if dir.nil?
   dir = Dir.pwd
