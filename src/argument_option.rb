@@ -14,6 +14,7 @@ class ArgumentOption
     @action.call
   end
 
+  # Add an entry to the @aliases array
   def add_alias(text)
     @aliases << text
   end

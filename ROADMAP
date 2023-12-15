@@ -53,6 +53,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
 - Last call (date and updates)
 **** TODO Handle Unit tests and API documentation
 :LOGBOOK:
+CLOCK: [2023-12-15 ven. 08:53]--[2023-12-15 ven. 09:31] =>  0:38
 CLOCK: [2023-10-09 lun. 02:42]--[2023-10-09 lun. 02:48] =>  0:06
 CLOCK: [2023-10-06 ven. 06:26]--[2023-10-06 ven. 06:58] =>  0:32
 CLOCK: [2023-10-03 mar. 06:24]--[2023-10-03 mar. 06:48] =>  0:24
@@ -85,6 +86,7 @@ CLOCK: [2023-08-15 mar. 06:26]--[2023-08-15 mar. 06:58] =>  0:32
   or
   =yard server --reload=
   - [ ] Can we add a mainpage (to add the header group in config_parser for ex.)
+    Actually using the repo's README page
 **** TODO Fix ARGV issue in main script
 - [ ] 004_favicon example fails to parse irbs/config.rb
   =Failed to parse= seems to be from server.rb

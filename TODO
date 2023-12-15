@@ -9,7 +9,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/`
 
 * v0.0.1-11 (30 Oct. 2023 - ???) SLOC ???
-- (6) Switch to version 0.0.1 (just closed a group/header related section)
+- (7) Improve ArgumentOption and Group classes documentation
+- Switch to version 0.0.1 (just closed a group/header related section)
 - Server from main script uses ConfigReader's header group for favicon
 - Group doesn't render if no children
 - Add Group class and associated tests
