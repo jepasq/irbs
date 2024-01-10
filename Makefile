@@ -1,3 +1,5 @@
+.PHONY: doc
+
 LNS=ln -sf
 BIN=/usr/local/bin
 PWD=`pwd`
@@ -19,3 +21,5 @@ check-group:
 check-arg:
 	bundle exec rspec -I src/ tests/argument.rspec
 
+doc:
+	yard

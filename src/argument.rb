@@ -8,10 +8,17 @@ require_relative 'argument_option'
 class Argument
   attr_reader :opts # The list of options
 
+  # The argument default constructor
   def initialize
     @opts= Array.new
   end
-  
+
+  # Add an ArgumentOption to the options array
+  #
+  # @option The argument of the ArgumentOption type.
+  #
+  # @raise May raise an ArgumentError if a bad argument type is provided.
+  #
   def add(option)
     raise ArgumentError unless option.is_a?(ArgumentOption)
 

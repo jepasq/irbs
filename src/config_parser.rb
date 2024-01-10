@@ -65,6 +65,11 @@ class ConfigParser
     @port = p
   end
 
+  # Set the document title to t
+  #
+  # It's value is maily used in title_content()
+  #
+  # @param t The new title value
   def title(t)
     @title = t
   end
