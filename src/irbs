@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 VERSION="0.0.1"
-REVISION=10
+REVISION=11
 
 # Check if we are running from the bundler environment. If you call this script
 # directly (without bundler), you may have require error (especially with the

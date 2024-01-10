@@ -1,3 +1,13 @@
+* v0.0.1-11 (30 Oct. 2023 - 10 Jan. 2024) SLOC 529 UT 39
+- Close an API-related section and improve documentation
+- Improve ArgumentOption and Group classes documentation
+- Switch to version 0.0.1 (just closed a group/header related section)
+- Server from main script uses ConfigReader's header group for favicon
+- Group doesn't render if no children
+- Add Group class and associated tests
+- Fix a not_raise_error-related error in parser tests
+- Fix a not_to raise_error warning in parser.rspec:7
+
 * v0.0.0-10 (20 Sep. 2023 - 30 Oct. 2023) SLOC 460
 - Add a test to make sure main script is ran through bundler
 - Fix require issue with mime/type in example 004 via bundler

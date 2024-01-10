@@ -6,15 +6,9 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     (8 items by revision)
     Add a git tag fro each revision
     Update version and revision in src/irbs header constants.
-    SLOC is the result of `sloc src/`
+    SLOC is the result of `sloc src/ tests/`
+    UT is the number of example returned by `make check`
 
-* v0.0.1-11 (30 Oct. 2023 - ???) SLOC ???
-- (8) Close an API-related section and improve documentation
-- Improve ArgumentOption and Group classes documentation
-- Switch to version 0.0.1 (just closed a group/header related section)
-- Server from main script uses ConfigReader's header group for favicon
-- Group doesn't render if no children
-- Add Group class and associated tests
-- Fix a not_raise_error-related error in parser tests
-- Fix a not_to raise_error warning in parser.rspec:7
+* v0.0.1-12 (10 Jan. 2024 - ???) SLOC ??? UT ??
+
 
