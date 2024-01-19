@@ -26,7 +26,8 @@ or simply
 
 	make run
 
-You can pass parameters after make run.
+You can pass parameters after make run, for example, to run an example, run
+the following command : `make run examples/004_favicon`.
 
 ## Installation
 

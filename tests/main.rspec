@@ -2,6 +2,12 @@
 
 # The main script location
 script='src/irbs'
+script='bundle exec src/irbs'
+
+def exec_script(args)
+  output = `#{script} args` #bundle exec
+  return output, $?
+end
 
 # Check if this script is correctly called from root sir
 unless Dir.pwd.end_with? "irbs"
@@ -24,38 +30,42 @@ describe MainScript do
   it "more than 1 arg produces error status code" do
     # The '2>&1' trick is here to redirect stderr to stdout and finally
     # have a quit output in tests
-    output = `#{script} arg1 arg2 2>&1`
-    expect($?.success?).to be false
+    output, st = exec_script("arg1 arg2 2>&1")
+    expect(st.success?).to be false
   end
 
   it "directory argument should exist" do
     # Can't test Exception raising here because script is executed via shell
-    output = `#{script} examples/thisDirectoryWontExistEvenInSeveralYears 2>&1`
-    expect($?.success?).to be false
+    output, st = exec_script("examples/thisDirectoryWontExist 2>&1")
+    expect(st.success?).to be false
 
-    output = `#{script} --non-interactive examples/001_app 2>&1`
-    expect($?.success?).to be true
+    output, st = exec_script("--non-interactive examples/001_app 2>&1")
+    expect(st.success?).to be true
   end
 
   it "has a usage option" do
-    output = `#{script} --help`
+    output, _ = exec_script("--help")
     p output
     expect(output.include? "usage").to be true
 
-    output = `#{script} -h`
+    output, _ = exec_script("-h")
     expect(output.include? "usage").to be true
-    output = `#{script} -?`
+    output, _ = exec_script("-?")
     expect(output.include? "usage").to be true
 
-    output = `#{script} -h`
-    expect($?.success?).to be true
+    _, st = exec_script("-h")
+    expect(st.success?).to be true
   end
 
   # This one is not yet failing because it test options as a directory
   it "raises an exception if option doesn't exist" do
-    `#{script} --thisOptionDoesntExist`
-    expect($?.success?).to be false
+    _, st = exec_script("--thisOptionDoesntExist")
+    expect(st.success?).to be false
   end
 
+  it "raises an exception if option doesn't exist" do
+    output, st = exec_script("--thisOptionDoesntExist")
+    expect($?.success?).to be false
+  end
   
 end
