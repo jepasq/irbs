@@ -10,5 +10,6 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of example returned by `make check`
 
 * v0.0.1-12 (10 Jan. 2024 - ???) SLOC ??? UT ??
-- (1) Upgrade mime-types dependency from 3.5 to 3.5.2
+- (2) Fix a main test related to script file
+- Upgrade mime-types dependency from 3.5 to 3.5.2
 

@@ -1,8 +1,8 @@
 #                                          -*-ruby-*-
 
 # The main script location
-script='src/irbs'
-script='bundle exec src/irbs'
+script_file='src/irbs'
+script="bundle exec #{script_file}"
 
 def exec_script(args)
   output = `#{script} args` #bundle exec
@@ -20,7 +20,7 @@ end
 
 describe MainScript do
   it "exists" do
-    expect(File.exist?(script)).to be true
+    expect(File.exist?(script_file)).to be true
   end
   
   it "is executable" do
