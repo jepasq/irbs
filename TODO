@@ -10,7 +10,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of example returned by `make check`
 
 * v0.0.1-12 (10 Jan. 2024 - ???) SLOC ??? UT ??
-- (6) Bundle update dependencies
+- (7) Move favicon from header group to head one
+- Bundle update dependencies
 - Replace default port config_parser's getter with get_port
 - Fix args passing in tests's exec_script method
 - Make script and script_file flobal in main test file
