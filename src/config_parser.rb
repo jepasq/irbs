@@ -5,10 +5,11 @@ require_relative 'group'
 # This parser is used to define keyword that can be used in a DSL to configure
 # irbs server.
 #
-# This class also contain the header group that can be used to modify 
+# This class also contain the header group that can be used to modify
+#
+# We try to avoid automatically-generated getter and setter here to replace
+# them with get_*** because the setter is better without '=' sign.
 class ConfigParser
-  # The port the server will listen to new connection on
-  attr_reader :port
   
   # A hash of key/value serving as routes
   #
@@ -75,9 +76,15 @@ class ConfigParser
   end
 
   # We can't use a simple attr_reader here as its name conflicts with setter
+  # and we want setter to be called without '=' (equal) sign
   def get_title
     @title
   end
 
+  def get_port
+    @port
+  end
+
+  
   
 end

@@ -118,7 +118,7 @@ class Server
     end
     
     # Open server
-    p = parser.port
+    p = parser.get_port
     socket = TCPServer.new(p)
     puts "Listening on port #{p}..."
     loop do                                                  

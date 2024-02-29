@@ -68,8 +68,9 @@ CLOCK: [2024-01-10 mer. 15:26]--[2024-01-10 mer. 16:03] =>  0:37
   =yard server --reload=
   - [ ] Can we add a mainpage (to add the header group in config_parser for ex.)
     Actually using the repo's README page
-**** TODO [fix_TestsUseBundleExec] Fix ARGV issue in main script
+**** TODO Fix ARGV issue in main script
 :LOGBOOK:
+CLOCK: [2024-02-29 jeu. 06:23]--[2024-02-29 jeu. 06:40] =>  0:17
 CLOCK: [2024-02-29 jeu. 05:36]--[2024-02-29 jeu. 05:43] =>  0:07
 CLOCK: [2024-02-12 lun. 02:37]--[2024-02-12 lun. 03:42] =>  1:05
 CLOCK: [2024-01-30 mar. 15:59]--[2024-01-30 mar. 16:18] =>  0:19
@@ -80,20 +81,21 @@ CLOCK: [2024-01-19 ven. 17:25]--[2024-01-19 ven. 17:32] =>  0:07
 - [X] Tests now try to use =bundle exec=
   Actually =make check= causes 7 failures
   =bundle exec rspec -I src/ ./tests/main.rspec:22=
+- [X] 004_favicon example fails to parse irbs/config.rb
+  =Failed to parse= seems to be from port
+  arg.only_dirs(ARGV) in irbs main script seems to fail
+  - [X] Check Argument class tests : no, ARGV is already empty here
+  - [X] Try to write a unit test for this
+
+- [ ] May create config_parser unit test
 
 - [ ] Can we make the main script non-executable to make sure it is called
   with bundle exec (must change main unit test if so)
-
-- [ ] 004_favicon example fails to parse irbs/config.rb
-  =Failed to parse= seems to be from server.rb
-  arg.only_dirs(ARGV) in irbs main script seems to fail
-  - [ ] Check Argument class tests : no, ARGV is already empty here
-  - [ ] Try t write a unit test for this
       
 - [ ] Find how to implement Class with all attributes, as a hash for exemple
 
-- [ ] Why Config_PArser doesn't use attr_accessor for title ?
-  We cureently have
+- [ ] Why ConfigParser doesn't use attr_accessor for title ?
+  We curently have
   
 - [ ] It's not clear why the 003 example, for example, has a main class file
   named 'Application' where all other files will be named in snake case ?
