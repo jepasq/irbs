@@ -1,0 +1,14 @@
+#                                          -*-ruby-*-
+
+require 'config_parser'
+
+
+describe ConfigParser do
+  it "can be instantiated and has some default values" do
+     cf = ConfigParser.new
+     expect(cf.nil?).to be false
+
+     expect(cf.routes.class.to_s).to eq "Hash"
+     expect(cf.routes.has_key? "root").to be true
+  end
+end
