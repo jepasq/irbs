@@ -9,13 +9,6 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/ tests/`
     UT is the number of example returned by `make check`
 
-* v0.0.1-12 (10 Jan. 2024 - ???) SLOC ??? UT ??
-- (8) Add basic ConfigParser rspec file
-- Move favicon from header group to head one
-- Bundle update dependencies
-- Replace default port config_parser's getter with get_port
-- Fix args passing in tests's exec_script method
-- Make script and script_file flobal in main test file
-- Fix a main test related to script file
-- Upgrade mime-types dependency from 3.5 to 3.5.2
+* v0.0.1-13 (13 Mar. 2024 - ???) SLOC ??? UT ??
+
 
