@@ -10,5 +10,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of example returned by `make check`
 
 * v0.0.1-13 (13 Mar. 2024 - ???) SLOC ??? UT ??
-
+- (1) Redirect error ouput from unit tests executed scripts to /dev/null
 

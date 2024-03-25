@@ -61,8 +61,10 @@ CLOCK: [2024-01-10 mer. 16:09]--[2024-01-10 mer. 16:16] =>  0:07
 | 13 Mar. 2024 | mime-types-data (.0206 -> .0305)         |
 **** TODO Continue Unit tests and API documentation
 :LOGBOOK:
+CLOCK: [2024-03-25 lun. 07:16]--[2024-03-25 lun. 07:33] =>  0:17
 CLOCK: [2024-01-10 mer. 15:26]--[2024-01-10 mer. 16:03] =>  0:37
 :END:
+- [X] Should redirect error output to /dev/null when running test
 - [ ] Testing API doc generation with yard
   =yard stats --list-undoc= for undocumented members
   =yard doc src=
