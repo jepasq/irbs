@@ -11,4 +11,22 @@ describe ConfigParser do
      expect(cf.routes.class.to_s).to eq "Hash"
      expect(cf.routes.has_key? "root").to be true
   end
+
+  it "can return title content" do
+     cf = ConfigParser.new
+     expect(cf.title_content.nil?).to be true
+
+     cf.title("aaa")
+     expect(cf.title_content).to eq "<title>aaa</title>"
+  end
+
+  it "has a get_title function" do
+     cf = ConfigParser.new
+     expect(cf.get_title().nil?).to be true
+
+     cf.title("aaa")
+     expect(cf.get_title()).to eq "aaa"
+  end
+
+  
 end
