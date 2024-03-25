@@ -62,6 +62,7 @@ class ConfigParser
     "<title>#{@title}</title>" if @title
   end
 
+  # Port DSL-style (without equal sign) setter
   def port(p)
     @port = p
   end
@@ -81,6 +82,10 @@ class ConfigParser
     @title
   end
 
+  # port member better
+  #
+  # We can't use a simple attr_reader here as its name conflicts with setter
+  # and we want setter to be called without '=' (equal) sign
   def get_port
     @port
   end

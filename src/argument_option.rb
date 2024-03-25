@@ -2,7 +2,12 @@
 # and possibly multiples aliases
 class ArgumentOption
   attr_reader :aliases
-  
+
+  # Constructor
+  #
+  # @param text  An alias text.
+  # @param help  Help text.
+  # @param block The block to be executed.
   def initialize(text, help, &block)
     @help = help
     @action = block
@@ -35,6 +40,9 @@ class ArgumentOption
     end
   end
 
+  # Run fire_if function for each argument of the array
+  #
+  # @param arg An array argument
   def fire_if_array(arg)
     arg.each do |a|
       fire_if a
@@ -52,6 +60,7 @@ class ArgumentOption
     ret
   end
 
+  # Return the first column of an help output (i.e all aliases)
   def first_column
     aliases.join(', ')
   end

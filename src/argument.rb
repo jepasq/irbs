@@ -63,6 +63,7 @@ class Argument
     ttt
   end
 
+  # Add the help/usage argument
   def add_usage
     help = ArgumentOption.new('--help', 'Show usage text and exit') do
       puts "irbs v#{VERSION}-#{REVISION} usage text :\n"

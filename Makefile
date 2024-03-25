@@ -22,4 +22,4 @@ check-arg:
 	bundle exec rspec -I src/ tests/argument.rspec
 
 doc:
-	yard
+	@yard stats --list-undoc
