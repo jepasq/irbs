@@ -1,0 +1,17 @@
+#                                          -*-ruby-*-
+
+require_relative '../../src/config_parser'
+
+# Tests for the 001_app example
+script='bundle exec src/irbs'
+
+describe "Example_004Favicon" do
+
+  # A frshly created ConfigParser class must have a nil title
+  
+  it "must contain some favicon link elements" do
+    output = `#{script} --non-interactive examples/005_class 5>&1`
+    expect(output).to include('<div class="css_class')
+    expect(output).to include('<div class="2ss_class may be')
+  end
+end
