@@ -76,6 +76,7 @@ CLOCK: [2024-01-10 mer. 15:26]--[2024-01-10 mer. 16:03] =>  0:37
     Actually using the repo's README page
 **** TODO Fix ARGV issue in main script
 :LOGBOOK:
+CLOCK: [2024-04-05 ven. 07:16]--[2024-04-05 ven. 07:38] =>  0:22
 CLOCK: [2024-03-25 lun. 09:05]--[2024-03-25 lun. 09:19] =>  0:14
 CLOCK: [2024-03-13 mer. 03:48]--[2024-03-13 mer. 04:30] =>  0:42
 CLOCK: [2024-02-29 jeu. 07:23]--[2024-02-29 jeu. 07:29] =>  0:06
@@ -97,20 +98,18 @@ CLOCK: [2024-01-19 ven. 17:25]--[2024-01-19 ven. 17:32] =>  0:07
   - [X] Try to write a unit test for this
 - [X] Why ConfigParser doesn't use attr_accessor for title ? explained
 - [X] 004_favicon have the favicon link item but in header and not in head
+- [X] Can we make the main script non-executable to make sure it is called
+  with bundle exec (must change main unit test if so). No, it must be executable
+- [X] Add rspec for example_001
 
 - [ ] May create config_parser unit test :  Started
   
-- [ ] Can we make the main script non-executable to make sure it is called
-  with bundle exec (must change main unit test if so)
-
 - [ ] Find how to implement Class with all attributes, as a hash for exemple
-  
 - [ ] It's not clear why the 003 example, for example, has a main class file
   named 'Application' where all other files will be named in snake case ?
 - [ ] We have an =raise_if_unknown_arg= error when running irbs manually
   with the list of implemented options, maybe an array error
 - [ ] How to handle endpoint argument : now test it
-- [ ] Add rspec for example_001
 **** DONE Handle Unit tests and API documentation
 :LOGBOOK:
 CLOCK: [2023-12-15 ven. 08:53]--[2023-12-15 ven. 09:31] =>  0:38

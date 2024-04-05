@@ -89,7 +89,4 @@ class ConfigParser
   def get_port
     @port
   end
-
-  
-  
 end

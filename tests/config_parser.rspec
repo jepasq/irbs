@@ -28,5 +28,12 @@ describe ConfigParser do
      expect(cf.get_title()).to eq "aaa"
   end
 
+  it "has a get_port function" do
+     cf = ConfigParser.new
+     expect(cf.get_port()).to eq 8082
+
+     cf.port(1234)
+     expect(cf.get_port()).to eq 1234
+  end
   
 end
