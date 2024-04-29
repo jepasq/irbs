@@ -52,4 +52,23 @@ describe Parser do
     expect( c.size ).to equal(3)
     expect( c[0] ).to   eq("Aze")
   end
+
+  it "Can return first opening tag" do
+    p = Parser.new
+    output = p.get_first_opening_tag("<div>Sample content</div>")
+    expect(output).to include('<div>')
+
+    output = p.get_first_opening_tag("Content before <div>Sample")
+    expect(output).to include('<div>')
+
+  end
+  
+  it "Should have a add_cssclass function" do
+    p = Parser.new
+    instance = Hash.new
+    hash.class = "aze"
+    output = p.add_cssclass("<div>Sample content</div>")
+    expect(output).to include('<div class="aze">')
+  end
+  
 end
