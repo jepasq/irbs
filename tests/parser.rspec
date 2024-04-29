@@ -2,6 +2,12 @@
 
 require 'parser'
 
+class ObjWithClass
+  @cssclass = "cssClass"
+
+  attr_accessor :cssclass
+end
+
 describe Parser do
   it "ctor takes a directory argument" do
     expect { 
@@ -61,12 +67,14 @@ describe Parser do
     output = p.get_first_opening_tag("Content before <div>Sample")
     expect(output).to include('<div>')
 
+    output = p.get_first_opening_tag("Content before but without no tag")
+    expect(output.nil?).to be true
   end
   
   it "Should have a add_cssclass function" do
     p = Parser.new
-    instance = Hash.new
-    hash.class = "aze"
+    instance = ObjWithClass.new
+    instance.cssclass = "aze"
     output = p.add_cssclass("<div>Sample content</div>")
     expect(output).to include('<div class="aze">')
   end

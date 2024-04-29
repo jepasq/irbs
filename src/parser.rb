@@ -52,5 +52,16 @@ class Parser
     end
     
     return handle_classes(txt)
-  end               
+  end
+
+  # Return the first HTML opening tag from a string or nil if not found
+  def get_first_opening_tag(str)
+    tag = str.match(/<[a-zA-Z](.*?[^?])?>/)
+
+    if tag.nil?
+      return tag
+    else
+      return tag[0]
+    end
+  end
 end
