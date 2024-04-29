@@ -1,3 +1,13 @@
+* v0.0.1-13 (13 Mar. 2024 - 29 Apr. 2024) SLOC 559 UT 47
+- First Parser.get_first_opening_tag implementation
+- Close main script ARGV issue ROADMAP section
+- Add a couple of Parser tests
+- Add a 5th example on attributes and associated tests
+- Add config_parser's get_port method unit test
+- Improve API doc for undocumented members
+- Add a couple of config_parser tests
+- Redirect error ouput from unit tests executed scripts to /dev/null
+
 * v0.0.1-12 (10 Jan. 2024 - 13 Mar. 2024) SLOC 536 UT 41
 - Add basic ConfigParser rspec file
 - Move favicon from header group to head one
