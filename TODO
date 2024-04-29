@@ -10,7 +10,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of example returned by `make check`
 
 * v0.0.1-13 (13 Mar. 2024 - ???) SLOC ??? UT ??
-- (6) Add a couple of Parser tests
+- (7) Close main script ARGV issue ROADMAP section
+- Add a couple of Parser tests
 - Add a 5th example on attributes and associated tests
 - Add config_parser's get_port method unit test
 - Improve API doc for undocumented members
