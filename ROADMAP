@@ -56,9 +56,10 @@ CLOCK: [2024-02-29 jeu. 06:59]--[2024-02-29 jeu. 07:01] =>  0:02
 CLOCK: [2024-01-10 mer. 16:09]--[2024-01-10 mer. 16:16] =>  0:07
 :END:
 - Last call (date and updates)
-| 10 Jan. 2024 | mime-types (3.5 -> 3.5.2) and -data      |
+| 10 Jan. 2024 | mime-types (3.5 -> 3.5.2) and -data       |
 | 29 Feb. 2024 | mime-types-data and rspec* (3.12 -> 3.13) |
-| 13 Mar. 2024 | mime-types-data (.0206 -> .0305)         |
+| 13 Mar. 2024 | mime-types-data (.0206 -> .0305)          |
+| 16 May 2024  | rspec-mocks (3.13.0 -> 3.13.1) and more   |
 **** TODO Continue Unit tests and API documentation
 :LOGBOOK:
 CLOCK: [2024-05-16 jeu. 16:51]--[2024-05-16 jeu. 17:17] =>  0:26
