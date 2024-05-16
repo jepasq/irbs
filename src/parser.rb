@@ -22,7 +22,7 @@ class Parser
     @directory = dir
   end
   
-  # Extract classnames from the given string and return than in an array
+  # Extract classnames from the given string and return them in an array
   def extract_classes(txt)
     txt.scan(REGEX_CLASS).flatten
   end
@@ -30,12 +30,14 @@ class Parser
   # Extract then replace the text by the classes representation
   def handle_classes(txt)
     ret = txt
-    extract_classes(txt).each do |c|
-      # Instanciates the class, get its representation and replace string
-      classfile = File.join(@directory, c.downcase + '.rb')
-      require_relative classfile
-      instance = Kernel.const_get(c).new
-      ret.gsub!( '=' + c, instance.to_s)
+    if @directory
+      extract_classes(txt).each do |c|
+        # Instanciates the class, get its representation and replace string
+        classfile = File.join(@directory, c.downcase + '.rb')
+        require_relative classfile
+        instance = Kernel.const_get(c).new
+        ret.gsub!( '=' + c, instance.to_s)
+      end
     end
     ret
   end
@@ -63,5 +65,9 @@ class Parser
     else
       return tag[0]
     end
+  end
+
+  def add_cssclass(str)
+    return parse(str)
   end
 end

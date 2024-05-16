@@ -6,6 +6,10 @@ class ObjWithClass
   @cssclass = "cssClass"
 
   attr_accessor :cssclass
+
+  def to_str
+    "<div>Div content</div>"
+  end
 end
 
 describe Parser do
@@ -75,7 +79,7 @@ describe Parser do
     p = Parser.new
     instance = ObjWithClass.new
     instance.cssclass = "aze"
-    output = p.add_cssclass("<div>Sample content</div>")
+    output = p.add_cssclass("<div>=ObjWithClass</div>")
     expect(output).to include('<div class="aze">')
   end
   
