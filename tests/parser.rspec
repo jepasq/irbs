@@ -74,6 +74,13 @@ describe Parser do
     output = p.get_first_opening_tag("Content before but without no tag")
     expect(output.nil?).to be true
   end
+
+  it "can extract classes as an array" do
+    p = Parser.new
+    output = p.extract_classes("<div>=ObjWithClass</div>")
+    expect( output.is_a? Array ).to equal(true)
+    expect( output[0] ).to eq("ObjWithClass")
+  end
   
   it "Should have a add_cssclass function" do
     p = Parser.new

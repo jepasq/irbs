@@ -21,8 +21,15 @@ class Parser
   def initialize(dir = nil)
     @directory = dir
   end
+
+  def create_instance(c)
+    # Instanciates the class, get its representation and replace string
+    classfile = File.join(@directory, c.downcase + '.rb')
+    require_relative classfile
+    instance = Kernel.const_get(c).new
+  end
   
-  # Extract classnames from the given string and return them in an array
+  # classnames from the given string and return them in an array
   def extract_classes(txt)
     txt.scan(REGEX_CLASS).flatten
   end
@@ -32,10 +39,7 @@ class Parser
     ret = txt
     if @directory
       extract_classes(txt).each do |c|
-        # Instanciates the class, get its representation and replace string
-        classfile = File.join(@directory, c.downcase + '.rb')
-        require_relative classfile
-        instance = Kernel.const_get(c).new
+        instance = create_instance(c)
         ret.gsub!( '=' + c, instance.to_s)
       end
     end
@@ -67,7 +71,13 @@ class Parser
     end
   end
 
+  # return a string where we add classes to, for example div
   def add_cssclass(str)
+    extract_classes(str).each do |c|
+      instance = create_instance(c)
+      
+      p instance.cssclass
+    end
     return parse(str)
   end
 end
