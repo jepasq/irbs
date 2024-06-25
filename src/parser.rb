@@ -24,7 +24,9 @@ class Parser
 
   def create_instance(c)
     # Instanciates the class, get its representation and replace string
-    classfile = File.join(@directory, c.downcase + '.rb')
+    #   Trying ot get rid of 'no-implicit-conversion-of-nil-into-string'
+    #   using both string interpolation and .to_s
+    classfile = File.join(@directory.to_s, "#{c.downcase}.rb")
     require_relative classfile
     instance = Kernel.const_get(c).new
   end
