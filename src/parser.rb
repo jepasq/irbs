@@ -27,7 +27,15 @@ class Parser
     #   Trying ot get rid of 'no-implicit-conversion-of-nil-into-string'
     #   using both string interpolation and .to_s
     classfile = File.join(@directory.to_s, "#{c.downcase}.rb")
-    require_relative classfile
+    begin
+      require_relative classfile
+    rescue LoadError
+      # Prints the dir to be sure
+      puts "Failed to load '#{__dir__}#{classfile}' (cannot load such file)"
+    rescue Exception => e
+      puts $!
+      raise e
+    end
     instance = Kernel.const_get(c).new
   end
   

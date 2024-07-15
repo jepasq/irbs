@@ -65,6 +65,7 @@ CLOCK: [2024-01-10 mer. 16:09]--[2024-01-10 mer. 16:16] =>  0:07
 |               |                                           |
 **** TODO Continue Unit tests and API documentation
 :LOGBOOK:
+CLOCK: [2024-07-15 lun. 08:10]--[2024-07-15 lun. 08:36] =>  0:26
 CLOCK: [2024-06-25 mar. 05:47]--[2024-06-25 mar. 06:04] =>  0:17
 CLOCK: [2024-06-03 lun. 17:56]--[2024-06-03 lun. 18:24] =>  0:28
 CLOCK: [2024-05-16 jeu. 16:51]--[2024-05-16 jeu. 17:17] =>  0:26
@@ -79,7 +80,9 @@ CLOCK: [2024-01-10 mer. 15:26]--[2024-01-10 mer. 16:03] =>  0:37
   - [X] @class is not usable as field name, maybe rename to @cssclass or @css
   - [ ] Then, test it and implement it
     Parser#add_cssclass return a string where we add classes to, for example div
-        
+    - [ ] =cannot load such file -- /objwithclass.rb=
+      
+            
 - [ ] It's not clear why the 003 example, for example, has a main class file
   named 'Application' where all other files will be named in snake case ?
 - [ ] We have an =raise_if_unknown_arg= error when running irbs manually
