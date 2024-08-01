@@ -10,7 +10,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of example returned by `make check`
 
 * v0.0.1-14 (29 Apr. 2024 - ???) SLOC ??? UT ??
-- (5) Better load error handling in parser
+- (6) Another mime-types-data dependency upgrade
+- Better load error handling in parser
 - Fix a CI nil to string conversion error using string interpolation
 - Upgrade mime-types-data and rspec-expectations dependencies using bundle
 - Implement a Parser#create_instance function
