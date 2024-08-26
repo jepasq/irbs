@@ -43,6 +43,7 @@ CLOCK: [2024-01-10 mer. 16:09]--[2024-01-10 mer. 16:16] =>  0:07
 | 03 Jun. 2024 | bundler, rspec-* and mime-*               |
 | 25 Jun. 2024 | mime-types-data and rspec-expectations    |
 | 01 Aug. 2024 | mime-types-data from 3.2024.0604 to .0702 |
+| 26 Aug. 2024 | mime-types-data and rspec-expectations    |
 |              |                                           |
 **** TODO Open a web server based on a DSL-based ruby configuration file (2)
 :LOGBOOK:
