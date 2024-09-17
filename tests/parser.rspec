@@ -89,5 +89,11 @@ describe Parser do
     output = p.add_cssclass("<div>=ObjWithClass</div>")
     expect(output).to include('<div class="aze">')
   end
+
+  it "handles class_to_filename conversion" do
+    p = Parser.new
+    expect( p.class_to_file("Aze") ).to eq("aze.rb")
+    expect( p.class_to_file("ObjWithClass") ).to eq("obj_with_class")
+  end
   
 end

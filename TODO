@@ -10,5 +10,5 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of 'examples' returned by `make check`
 
 * v0.0.1-15 (17 Sep. 2024 - ???) SLOC ??? UT ??
-
+- (1) Basic Parser#class_to_filename implementation and unit tests
 

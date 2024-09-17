@@ -22,16 +22,19 @@ class Parser
     @directory = dir
   end
 
+  # Instanciates the class, get its representation and replace string
+  #
+  # @param c The class name as found in the representation.
   def create_instance(c)
-    # Instanciates the class, get its representation and replace string
     #   Trying ot get rid of 'no-implicit-conversion-of-nil-into-string'
     #   using both string interpolation and .to_s
-    classfile = File.join(@directory.to_s, "#{c.downcase}.rb")
+    classfile = File.join(@directory.to_s, class_to_filename(c))
     begin
       require_relative classfile
     rescue LoadError
       # Prints the dir to be sure
-      puts "Failed to load '#{__dir__}#{classfile}' (cannot load such file)"
+      puts "Failed to load '#{__dir__}#{classfile}' For object `#{c}'"
+      puts "  (cannot load such file)"
     rescue Exception => e
       puts $!
       raise e
@@ -89,5 +92,15 @@ class Parser
       p instance.cssclass
     end
     return parse(str)
+  end
+
+  # Return the filename based on a class name foudn in the representation
+  #
+  # If we found '=ClassName', this function will return the file where we
+  # can find its definition.
+  #
+  # @param c The base class name
+  def class_to_filename(c)
+    "#{c.downcase}.rb"
   end
 end
