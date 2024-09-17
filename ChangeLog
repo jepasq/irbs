@@ -1,3 +1,13 @@
+* v0.0.1-14 (29 Apr. 2024 - ???) SLOC 585 UT 48
+- Upgrade dependencies mime-types-data and rspec-* using bundler
+- Change example 005 tests description and name
+- Another mime-types-data dependency upgrade
+- Better load error handling in parser
+- Fix a CI nil to string conversion error using string interpolation
+- Upgrade mime-types-data and rspec-expectations dependencies using bundle
+- Implement a Parser#create_instance function
+- Add basic Parser#add_cssclass method and fix parse when directory is nil
+
 * v0.0.1-13 (13 Mar. 2024 - 29 Apr. 2024) SLOC 559 UT 47
 - First Parser.get_first_opening_tag implementation
 - Close main script ARGV issue ROADMAP section

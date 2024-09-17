@@ -7,15 +7,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     Add a git tag fro each revision
     Update version and revision in src/irbs header constants.
     SLOC is the result of `sloc src/ tests/`
-    UT is the number of example returned by `make check`
+    UT is the number of 'examples' returned by `make check`
 
-* v0.0.1-14 (29 Apr. 2024 - ???) SLOC ??? UT ??
-- (8) Upgrade dependencies mime-types-data and rspec-* using bundler
-- Change example 005 tests description and name
-- Another mime-types-data dependency upgrade
-- Better load error handling in parser
-- Fix a CI nil to string conversion error using string interpolation
-- Upgrade mime-types-data and rspec-expectations dependencies using bundle
-- Implement a Parser#create_instance function
-- Add basic Parser#add_cssclass method and fix parse when directory is nil
+* v0.0.1-15 (17 Sep. 2024 - ???) SLOC ??? UT ??
+
 
