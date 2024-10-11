@@ -92,8 +92,8 @@ describe Parser do
 
   it "handles class_to_filename conversion" do
     p = Parser.new
-    expect( p.class_to_file("Aze") ).to eq("aze.rb")
-    expect( p.class_to_file("ObjWithClass") ).to eq("obj_with_class")
+    expect( p.class_to_filename("Aze") ).to eq("aze.rb")
+    expect( p.class_to_filename("ObjWithClass") ).to eq("obj_with_class.rb")
   end
   
 end

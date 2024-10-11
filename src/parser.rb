@@ -52,7 +52,7 @@ class Parser
     ret = txt
     if @directory
       extract_classes(txt).each do |c|
-        instance = create_instance(c)
+        instance = create_instance(class_to_filename(c))
         ret.gsub!( '=' + c, instance.to_s)
       end
     end
@@ -101,6 +101,10 @@ class Parser
   #
   # @param c The base class name
   def class_to_filename(c)
-    "#{c.downcase}.rb"
+    # Thanks to https://stackoverflow.com/a/1509939
+    d=c.gsub(/::/, '/').
+      gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+      gsub(/([a-z\d])([A-Z])/,'\1_\2').tr("-", "_")
+    "#{d.downcase}.rb"
   end
 end
