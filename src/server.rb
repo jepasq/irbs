@@ -5,6 +5,10 @@ require_relative 'parser'
 require 'socket'
 
 # The main server
+#
+# It is responsible of the config file loading and can be ran either
+# interactively or output result to console (primarly for unit tests
+# purpose).
 class Server
   # A boolean setting if server must listen to client connection or simply
   # print generated pages to stdout.
@@ -15,7 +19,7 @@ class Server
 
   # Return a new interactive Server instance
   #
-  # The #endpoint attribute is set to '/'.
+  # The #endpoint attribute is set by default to '/'.
   def initialize
     @interactive = true
     @endpoint    = '/'
@@ -23,6 +27,12 @@ class Server
   end
 
   # Puts if interactive
+  #
+  # Prints the given message to standard console  only if the server runs
+  # in interactive mode.
+  #
+  # @param msg [String] The message to be printed if the server is in
+  #     interactive mode.
   def pii(msg)
     if @interactive
       puts msg
@@ -32,6 +42,8 @@ class Server
   end
   
   # Return the actual endpoint to a ruby Classname
+  #
+  # @return [String] The current endpoint converted to a class name
   def endpoint_to_classname
     if @endpoint == '/'
       "Home"
@@ -45,7 +57,7 @@ class Server
   # Here, the endpoint/slur will be use to get the class name from the router.
   # Il will then be used to create the needed class instance.
   #
-  # @param slur The part of URL we call endpoitn or slur.
+  # @param slur [String] The part of URL we call endpoitnt or slur.
   #
   # @return the instance content as string
   #
