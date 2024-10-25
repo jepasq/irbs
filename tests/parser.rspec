@@ -82,7 +82,7 @@ describe Parser do
     expect( output[0] ).to eq("ObjWithClass")
   end
   
-  it "Should have a add_cssclass function" do
+  it "Parser#add_cssclass function should add HTML class attribute" do
     p = Parser.new
     instance = ObjWithClass.new
     instance.cssclass = "aze"

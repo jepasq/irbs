@@ -65,6 +65,8 @@ class Parser
   # @param txt The text to be parser. Generally from a class instance
   #        representation.
   #
+  # @raise [ArgumentError] If the given txt argument is not a string.
+  #
   # @return The parsed text.
   def parse(txt)
     unless txt.is_a?(String)
@@ -75,6 +77,11 @@ class Parser
   end
 
   # Return the first HTML opening tag from a string or nil if not found
+  #
+  # @param str [String] The string we'll search tags in.
+  #
+  # @return [String] The first opening tag in the given string.
+  #
   def get_first_opening_tag(str)
     tag = str.match(/<[a-zA-Z](.*?[^?])?>/)
 
@@ -86,6 +93,12 @@ class Parser
   end
 
   # return a string where we add classes to, for example div
+  #
+  # @param str [string] The string to-be-parsed with #extract_classes()
+  #            #and parse().
+  #
+  # @return [String] The parsed string once classes extracted.
+  #
   def add_cssclass(str)
     extract_classes(str).each do |c|
       instance = create_instance(c)
@@ -100,7 +113,7 @@ class Parser
   # If we found '=ClassName', this function will return the file where we
   # can find its definition.
   #
-  # @param c The base class name
+  # @param c [String] The base camel-cased class name.
   def class_to_filename(c)
     # Thanks to https://stackoverflow.com/a/1509939
     d=c.gsub(/::/, '/').

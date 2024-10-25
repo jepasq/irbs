@@ -10,7 +10,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of 'examples' returned by `make check`
 
 * v0.0.1-15 (17 Sep. 2024 - ???) SLOC ??? UT ??
-- (4) Fix a call to parser#create_instance with nested class_to_filename
+- (5) Improve Parser class yard-based documentation
+- Fix a call to parser#create_instance with nested class_to_filename
 - Improve Server class API documentation
 - Upgrade mime-types* and rspec-mocks deps using bundler
 - Basic Parser#class_to_filename implementation and unit tests
