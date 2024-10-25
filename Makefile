@@ -21,6 +21,9 @@ check-group:
 check-arg:
 	bundle exec rspec -I src/ tests/argument.rspec
 
+check-parser:
+	bundle exec rspec -I src/ tests/parser.rspec
+
 doc:
 	@yard
 

@@ -39,7 +39,8 @@ class Parser
       puts $!
       raise e
     end
-    instance = Kernel.const_get(c).new
+    puts "Trying to get constant '#{c}'"
+    return Kernel.const_get(c).new
   end
   
   # classnames from the given string and return them in an array
@@ -52,7 +53,7 @@ class Parser
     ret = txt
     if @directory
       extract_classes(txt).each do |c|
-        instance = create_instance(class_to_filename(c))
+        instance = create_instance(c)
         ret.gsub!( '=' + c, instance.to_s)
       end
     end
