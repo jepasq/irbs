@@ -4,6 +4,8 @@ Inspection/Representation Based web Server.
 
 ## Dependencies
 
+### Installation
+
 You must install rspec before running unit tests :
 
 	sudo pamac install ruby-rspec ruby-yard
@@ -15,6 +17,13 @@ Dependencies are listed in a *Gemfile*. To install all at once :
 If you need to set a local path because of permissions error :
 
 	bundle config set --local path vendor/bundle
+
+### Update
+
+Using `bundler`, you can update all upgradable dependencies at once using this
+command :
+
+	bundle update
 
 ## Running
 
