@@ -74,6 +74,7 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
   Unit tests may be based on this examples and the main script return value
 **** TODO Continue Unit tests and API documentation
 :LOGBOOK:
+CLOCK: [2025-01-08 mer. 13:38]--[2025-01-08 mer. 13:56] =>  0:18
 CLOCK: [2024-10-25 ven. 14:11]--[2024-10-25 ven. 14:23] =>  0:12
 CLOCK: [2024-10-25 ven. 11:15]--[2024-10-25 ven. 11:59] =>  0:44
 CLOCK: [2024-10-11 ven. 10:54]--[2024-10-11 ven. 11:18] =>  0:24
@@ -95,6 +96,7 @@ CLOCK: [2024-01-10 mer. 15:26]--[2024-01-10 mer. 16:03] =>  0:37
     Parser#add_cssclass return a string where we add classes to, for example div
     - [X] parser#class_to_filename() function created for this
     - [ ] =cannot load such file -- /objwithclass.rb=
+      May try to print where we search
       
 - [ ] It's not clear why the 003 example, for example, has a main class file
   named 'Application' where all other files will be named in snake case ?

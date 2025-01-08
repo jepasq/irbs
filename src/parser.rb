@@ -40,7 +40,14 @@ class Parser
       raise e
     end
     puts "Trying to get constant '#{c}'"
-    return Kernel.const_get(c).new
+    begin
+      klass = Kernel.const_get(c)
+      return klass.new
+    rescue NameError
+      puts "uninitialized constant Kernel:: #{c}"
+      puts " Globvars = " + Kernel::global_variables.join(', ')
+      puts " Locvars  = " + Kernel::local_variables.join(', ')
+    end
   end
   
   # classnames from the given string and return them in an array
