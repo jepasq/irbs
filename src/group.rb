@@ -3,14 +3,23 @@
 
 # A group is a named container often used as an HTML section, header etc...
 #
+# HTML elements, such as ones used as group name here, all have names
+# that only use characters in the range 0–9, a–z, and A–Z 
+# ({ref.}[https://www.w3.org/TR/2012/WD-html-markup-20120329/syntax.html]).
 class Group
-  # The group name, printed between < and > chars
+  # [String] The group name, printed between < and > chars
+  #
+  #
   attr_accessor :name
 
   # [Array] items An items array. If empty, section is not printed
   attr_reader :items
   
   # Named constructor
+  #
+  # @param name {string} The name is the string often printed between < and >
+  # chars in HTML.
+  #
   def initialize(name)
     @name = name
     @items = Array.new

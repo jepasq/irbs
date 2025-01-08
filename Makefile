@@ -26,6 +26,8 @@ check-parser:
 
 doc:
 	@yard
+	@echo "Done. Now, open doc/index.html"
 
 undoc:
 	@yard stats --list-undoc
+	@echo "Done. Now, open doc/index.html"
