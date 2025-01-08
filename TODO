@@ -9,13 +9,6 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     SLOC is the result of `sloc src/ tests/`
     UT is the number of 'examples' returned by `make check`
 
-* v0.0.1-15 (17 Sep. 2024 - ???) SLOC ??? UT ??
-- (8) Bundle update and API documentation improvements
-- Print global and local vars when Kernel.const_get fail
-- Update some gems and explain that workflow in README
-- Improve Parser class yard-based documentation
-- Fix a call to parser#create_instance with nested class_to_filename
-- Improve Server class API documentation
-- Upgrade mime-types* and rspec-mocks deps using bundler
-- Basic Parser#class_to_filename implementation and unit tests
+* v0.0.1-16 (08 Jan. 2025 - ???) SLOC ??? UT ??
+
 

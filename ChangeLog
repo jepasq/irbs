@@ -1,3 +1,13 @@
+* v0.0.1-15 (17 Sep. 2024 - 08 Jan. 2025) SLOC 644 UT 49
+- Bundle update and API documentation improvements
+- Print global and local vars when Kernel.const_get fail
+- Update some gems and explain that workflow in README
+- Improve Parser class yard-based documentation
+- Fix a call to parser#create_instance with nested class_to_filename
+- Improve Server class API documentation
+- Upgrade mime-types* and rspec-mocks deps using bundler
+- Basic Parser#class_to_filename implementation and unit tests
+
 * v0.0.1-14 (29 Apr. 2024 - ???) SLOC 585 UT 48
 - Upgrade dependencies mime-types-data and rspec-* using bundler
 - Change example 005 tests description and name
