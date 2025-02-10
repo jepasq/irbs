@@ -1,5 +1,5 @@
 
-# A class used to parse the content returned by a .to_s() function
+# A class used to parse the content returned by a <tt>.to_s()</tt> function
 #
 # The representation of an instance must be parsed for :
 # - other classes : <tt>=Classname</tt>
@@ -9,6 +9,7 @@
 # - class with attribute set <tt>=ClassName{attr1=12}</tt>
 #
 class Parser
+  # The directory where we will search for classes implementation.
   attr_accessor :directory
   
   # The regex that should match the parsable name of a class (i.e. =ClassName)
@@ -51,11 +52,18 @@ class Parser
   end
   
   # classnames from the given string and return them in an array
+  #
+  # @param txt The text we scan for classnames.
   def extract_classes(txt)
     txt.scan(REGEX_CLASS).flatten
   end
 
   # Extract then replace the text by the classes representation
+  #
+  # This function will extract all classnames from the given text
+  # and replace them with its <tt>.to_s()</tt> string.
+  #
+  # @param txt The text we scan for classnames.
   def handle_classes(txt)
     ret = txt
     if @directory

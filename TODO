@@ -10,5 +10,6 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of 'examples' returned by `make check`
 
 * v0.0.1-16 (08 Jan. 2025 - ???) SLOC ??? UT ??
-- (1) Puts some parser#createçinstance messages to STDERR
+- (2) Slightly improve Parser class documentation
+- Puts some parser#createçinstance messages to STDERR
 
