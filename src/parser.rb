@@ -33,8 +33,8 @@ class Parser
       require_relative classfile
     rescue LoadError
       # Prints the dir to be sure
-      puts "Failed to load '#{__dir__}#{classfile}' For object `#{c}'"
-      puts "  (cannot load such file)"
+      STDERR.puts "Failed to load '#{__dir__}#{classfile}' For object `#{c}'"
+      STDERR.puts "  (cannot load such file)"
     rescue Exception => e
       puts $!
       raise e
@@ -44,9 +44,9 @@ class Parser
       klass = Kernel.const_get(c)
       return klass.new
     rescue NameError
-      puts "uninitialized constant Kernel:: #{c}"
-      puts " Globvars = " + Kernel::global_variables.join(', ')
-      puts " Locvars  = " + Kernel::local_variables.join(', ')
+      STDERR.puts "uninitialized constant Kernel:: #{c}"
+      STDERR.puts " Globvars = " + Kernel::global_variables.join(', ')
+      STDERR.puts " Locvars  = " + Kernel::local_variables.join(', ')
     end
   end
   
