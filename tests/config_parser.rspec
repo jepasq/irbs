@@ -3,7 +3,7 @@
 require 'config_parser'
 
 
-# We only test getters here. Advanced DSL-liek features as yield-based
+# We only test getters here. Advanced DSL-like features as yield-based
 # function are tested via examples.
 describe ConfigParser do
   it "can be instantiated and has some default values" do

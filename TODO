@@ -10,7 +10,8 @@ IRBS - AGPLv3 - Inspection/Representation Based web Server.
     UT is the number of 'examples' returned by `make check`
 
 * v0.0.1-16 (08 Jan. 2025 - ???) SLOC ??? UT ??
-- (3) Upgrade some core dependencies using bundler
+- (4) Test that usage text contains both APPNAME and VERSION
+- Upgrade some core dependencies using bundler
 - Slightly improve Parser class documentation
 - Puts some parser#createçinstance messages to STDERR
 

@@ -4,11 +4,12 @@ LNS=ln -sf
 BIN=/usr/local/bin
 PWD=`pwd`
 
+
 run:
 	bundle exec src/irbs $(ARGS)
 
 check:
-	bundle exec rspec -I src/ tests/*.rspec tests/examples/*.rspec
+	APP_ENV=test bundle exec rspec -I src/ tests/*.rspec tests/examples/*.rspec
 
 install:
 	mkdir -p $(BIN)
@@ -16,13 +17,13 @@ install:
 
 # Individual checks
 check-group:
-	bundle exec rspec -I src/ tests/group.rspec
+	APP_ENV=test bundle exec rspec -I src/ tests/group.rspec
 
 check-arg:
-	bundle exec rspec -I src/ tests/argument.rspec
+	APP_ENV=test bundle exec rspec -I src/ tests/argument.rspec
 
 check-parser:
-	bundle exec rspec -I src/ tests/parser.rspec
+	APP_ENV=test bundle exec rspec -I src/ tests/parser.rspec
 
 doc:
 	@yard

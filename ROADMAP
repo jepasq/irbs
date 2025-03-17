@@ -58,6 +58,7 @@ CLOCK: [2024-01-10 mer. 16:09]--[2024-01-10 mer. 16:16] =>  0:07
   |              |                                            |
 **** TODO Open a web server based on a DSL-based ruby configuration file (2)
 :LOGBOOK:
+CLOCK: [2025-03-17 lun. 10:21]--[2025-03-17 lun. 10:50] =>  0:29
 CLOCK: [2023-08-29 mar. 07:00]--[2023-08-29 mar. 07:13] =>  0:13
 CLOCK: [2023-08-29 mar. 06:10]--[2023-08-29 mar. 06:40] =>  0:30
 CLOCK: [2023-08-16 mer. 03:45]--[2023-08-16 mer. 04:05] =>  0:20
@@ -65,11 +66,12 @@ CLOCK: [2023-08-09 mer. 05:59]--[2023-08-09 mer. 06:33] =>  0:34
 :END:
 - [X] -?, -h or --help may print a usage message
 - [X] Must have an option to print page to stdout for test purpose
+- [X] Test that usage text contains appname and version
+  Started in test/argument.rspec
 - [-] Fix actual unit tests error due to non-inreactive server running
   - [X] We still have an issue with =./src/irbs -n examples/001_app
     *WARN: can't get classname from slur 'root'* trying to load =.rb= file
   - [ ] =rspec ./tests/main.rspec:31=
-- [ ] Test that usage text contains appname and version    
 - [ ] The main entry file could be a ruby-based DSL to configure server
   host, port etc...
 - [ ] Open our own webserver

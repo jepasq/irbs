@@ -72,6 +72,19 @@ describe Argument do
     arg.consume(['--non-interactive'])
     expect(srv.interactive).to eq(false)
   end
+
+  it "usage text contains APPNAME and VERSION " do
+    # originally defined in the 'irbs' file but redefined here to avoid
+    # a 'uninitialized constant' NameError.
+    VERSION="a.b.c"
+    REVISION=999
+    srv=Server.new   # interactive by default
+    arg = Argument.new
+    arg.add_usage
+    out = arg.consume(['-h'])
+    expect(out).to include(VERSION)
+    expect(out).to include(REVISION.to_s)
+  end
   
 end	
 

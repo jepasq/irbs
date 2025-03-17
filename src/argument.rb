@@ -85,7 +85,8 @@ class Argument
       @opts.each do |a|
         puts "  #{a.full_text(w)}"
       end
-      exit(0)
+      # Prevent the unit tests from exiting from argument.rspec 
+      exit(0) unless ENV['APP_ENV']=='test'
     end
     help.add_alias "-h"
     help.add_alias "-?"
