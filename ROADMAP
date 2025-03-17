@@ -40,19 +40,22 @@ CLOCK: [2024-02-29 jeu. 06:59]--[2024-02-29 jeu. 07:01] =>  0:02
 CLOCK: [2024-01-10 mer. 16:09]--[2024-01-10 mer. 16:16] =>  0:07
 :END:
 - Last call (date and updates)
-| 10 Jan. 2024 | mime-types (3.5 -> 3.5.2) and -data       |
-| 29 Feb. 2024 | mime-types-data and rspec* (3.12 -> 3.13) |
-| 13 Mar. 2024 | mime-types-data (.0206 -> .0305)          |
-| 16 May 2024  | rspec-mocks (3.13.0 -> 3.13.1) and more   |
-| 03 Jun. 2024 | bundler, rspec-* and mime-*               |
-| 25 Jun. 2024 | mime-types-data and rspec-expectations    |
-| 01 Aug. 2024 | mime-types-data from 3.2024.0604 to .0702 |
-| 26 Aug. 2024 | mime-types-data and rspec-expectations    |
-| 17 Sep. 2024 | mime-types-data and rspec-*               |
-| 11 Oct. 2024 | mime-types* and rspec-mocks               |
-| 13 Nov. 2024 | mime-types-data and rspec-core            |
-| 18 Dec. 2024 | logger rspec-* and mime-types             |
-| 08 Jan. 2025 | logger mime-types-data                    |
+  | *Date*       | *Updated packages*                         |
+  | 10 Jan. 2024 | mime-types (3.5 -> 3.5.2) and -data        |
+  | 29 Feb. 2024 | mime-types-data and rspec* (3.12 -> 3.13)  |
+  | 13 Mar. 2024 | mime-types-data (.0206 -> .0305)           |
+  | 16 May 2024  | rspec-mocks (3.13.0 -> 3.13.1) and more    |
+  | 03 Jun. 2024 | bundler, rspec-* and mime-*                |
+  | 25 Jun. 2024 | mime-types-data and rspec-expectations     |
+  | 01 Aug. 2024 | mime-types-data from 3.2024.0604 to .0702  |
+  | 26 Aug. 2024 | mime-types-data and rspec-expectations     |
+  | 17 Sep. 2024 | mime-types-data and rspec-*                |
+  | 11 Oct. 2024 | mime-types* and rspec-mocks                |
+  | 13 Nov. 2024 | mime-types-data and rspec-core             |
+  | 18 Dec. 2024 | logger rspec-* and mime-types              |
+  | 08 Jan. 2025 | logger mime-types-data                     |
+  | 17 Mar. 2025 | logger mime-types-data diff-lcs rspec-core |
+  |              |                                            |
 **** TODO Open a web server based on a DSL-based ruby configuration file (2)
 :LOGBOOK:
 CLOCK: [2023-08-29 mar. 07:00]--[2023-08-29 mar. 07:13] =>  0:13
